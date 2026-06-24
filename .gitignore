@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# Local/generated artifacts
+release/
+_debug_script_*.js
+
+# Reference PDFs are intentionally excluded from the public source release.
+*.pdf
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

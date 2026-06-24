@@ -1,0 +1,761 @@
+{
+  "schemaVersion": "1.0.0",
+  "filePurpose": "Python基础内容卡片的MOBA类比扩展包，供前端或 Codex 合并到基础知识 JSON 中使用。",
+  "designNotes": [
+    "使用通用 MOBA 机制类比，不包含具体游戏名称、英雄名、官方素材、图标或 UI。",
+    "类比用于辅助理解，技术解释仍以 coreConcept 为准。",
+    "建议前端展示 analogyTitle、analogy、mobaTip，并可将 codeMapping 渲染为“代码 ⇄ 含义”的小表格。"
+  ],
+  "recommendedMergeKey": "id",
+  "fields": {
+    "id": "与基础知识卡片对应的唯一标识，建议用它和原 cards 合并。",
+    "group": "知识分类。",
+    "title": "知识点标题。",
+    "coreConcept": "准确的技术解释。",
+    "analogyTitle": "类比模块标题。",
+    "analogy": "MOBA 类比正文，控制在 2-4 句话。",
+    "mobaTip": "一句用于记忆的游戏化提示。",
+    "codeMapping": "代码片段与含义的对应关系。",
+    "commonMistakes": "常见错误。",
+    "miniExample": "最小代码例子。"
+  },
+  "cards": [
+    {
+      "id": "execution-order",
+      "group": "基础语法",
+      "title": "程序从上往下执行",
+      "coreConcept": "Python 默认按照代码从上到下、一行一行执行，除非遇到 if、for、while 等流程控制语句改变路线。",
+      "analogyTitle": "MOBA 类比：行动队列",
+      "analogy": "程序执行顺序就像一场对局中的操作队列：先出门，再清线，再看地图，再决定是否支援。电脑不会跳着理解你的计划，它只会按顺序执行当前指令。",
+      "mobaTip": "代码顺序就是操作顺序。把输入放在计算后面，就像没买装备先去开团，逻辑会断。",
+      "codeMapping": [
+        {
+          "code": "name = input()",
+          "meaning": "先获取玩家输入"
+        },
+        {
+          "code": "score = int(input())",
+          "meaning": "先拿到数值"
+        },
+        {
+          "code": "print(score)",
+          "meaning": "最后输出结果"
+        }
+      ],
+      "commonMistakes": [
+        "还没定义变量就直接使用变量。",
+        "把 print 写在计算之前，导致输出的不是最终结果。"
+      ],
+      "miniExample": "a = 3\nb = 4\nprint(a + b)"
+    },
+    {
+      "id": "variable-basic",
+      "group": "基础语法",
+      "title": "变量：给数据贴标签",
+      "coreConcept": "变量是用来保存数据的名字，后续可以通过变量名再次使用这个数据。",
+      "analogyTitle": "MOBA 类比：英雄属性面板",
+      "analogy": "变量就像英雄当前的属性槽位，血量、金币、等级、经验都可以变化。x = 3 就是把 x 这个槽位当前设置为 3。",
+      "mobaTip": "变量名负责标记数据，变量值负责记录当前状态。状态变了，变量里的值也可以更新。",
+      "codeMapping": [
+        {
+          "code": "gold = 300",
+          "meaning": "金币变量当前是 300"
+        },
+        {
+          "code": "gold = gold + 50",
+          "meaning": "金币增加 50"
+        },
+        {
+          "code": "print(gold)",
+          "meaning": "查看当前金币"
+        }
+      ],
+      "commonMistakes": [
+        "把变量名写错，例如 score 和 Score 是两个不同名字。",
+        "误以为变量一旦赋值就不能改变。"
+      ],
+      "miniExample": "hp = 100\nhp = hp - 30\nprint(hp)"
+    },
+    {
+      "id": "input-basic",
+      "group": "输入输出",
+      "title": "input：从键盘获得信息",
+      "coreConcept": "input() 用来接收用户输入，但它得到的默认都是字符串。",
+      "analogyTitle": "MOBA 类比：队友发信号",
+      "analogy": "input 就像队友在小地图上给你发信号，你先收到信息，但这个信息本身只是文字。要用它参与计算，必须先转换成数字。",
+      "mobaTip": "输入进来的内容先别急着算，先确认它是文字还是数字。键盘输入默认是字符串。",
+      "codeMapping": [
+        {
+          "code": "name = input('请输入名字：')",
+          "meaning": "接收文字"
+        },
+        {
+          "code": "age = int(input('请输入年龄：'))",
+          "meaning": "接收后转成整数"
+        },
+        {
+          "code": "height = float(input('请输入身高：'))",
+          "meaning": "接收后转成小数"
+        }
+      ],
+      "commonMistakes": [
+        "直接用 input() 的结果做加法，结果变成字符串拼接或报错。",
+        "忘记 int() 或 float() 类型转换。"
+      ],
+      "miniExample": "x = int(input('请输入一个整数：'))\nprint(x + 1)"
+    },
+    {
+      "id": "print-basic",
+      "group": "输入输出",
+      "title": "print：输出结果",
+      "coreConcept": "print() 用来把变量、文字或计算结果显示到屏幕上。",
+      "analogyTitle": "MOBA 类比：战绩面板播报",
+      "analogy": "print 就像系统播报当前战况，把你计算好的结果展示出来。它不负责打团，只负责把结果说清楚。",
+      "mobaTip": "print 不是计算核心，它是结算面板。先把结果算出来，再输出。",
+      "codeMapping": [
+        {
+          "code": "print('hello')",
+          "meaning": "输出固定文字"
+        },
+        {
+          "code": "print(x)",
+          "meaning": "输出变量 x 的值"
+        },
+        {
+          "code": "print('结果是', x)",
+          "meaning": "文字和变量一起输出"
+        }
+      ],
+      "commonMistakes": [
+        "中文标点或引号错误。",
+        "忘记括号。",
+        "把变量名写在引号里，导致输出的是变量名字本身。"
+      ],
+      "miniExample": "score = 90\nprint('当前分数：', score)"
+    },
+    {
+      "id": "type-conversion",
+      "group": "输入输出",
+      "title": "类型转换：把输入变成能计算的数",
+      "coreConcept": "int() 把内容转成整数，float() 把内容转成小数，str() 把内容转成字符串。",
+      "analogyTitle": "MOBA 类比：装备合成条件",
+      "analogy": "类型转换像装备合成，材料类型要对才能合成。你不能拿文字直接当金币计算，必须先把它转换成数值。",
+      "mobaTip": "计算前先看数据类型。需要加减乘除时，通常先 int() 或 float()。",
+      "codeMapping": [
+        {
+          "code": "n = int(input())",
+          "meaning": "输入转整数"
+        },
+        {
+          "code": "x = float(input())",
+          "meaning": "输入转小数"
+        },
+        {
+          "code": "text = str(123)",
+          "meaning": "数字转文字"
+        }
+      ],
+      "commonMistakes": [
+        "int('3.5') 会报错，因为 3.5 不是整数格式。",
+        "把字符串和整数直接相加。"
+      ],
+      "miniExample": "a = int(input('a='))\nb = int(input('b='))\nprint(a + b)"
+    },
+    {
+      "id": "comment-basic",
+      "group": "基础语法",
+      "title": "注释：给人看的解释",
+      "coreConcept": "# 后面的内容是注释，Python 不会执行它。",
+      "analogyTitle": "MOBA 类比：战术标记",
+      "analogy": "注释像你在地图上做的战术备注，提醒自己这段代码的目的。它不会真的移动英雄，但能帮你看懂下一步。",
+      "mobaTip": "注释是给人看的，不是给机器执行的。考试里写清关键思路，也能减少自己读代码时迷路。",
+      "codeMapping": [
+        {
+          "code": "# 计算两个数的和",
+          "meaning": "说明下面代码的目的"
+        },
+        {
+          "code": "print(a + b)",
+          "meaning": "真正执行的代码"
+        }
+      ],
+      "commonMistakes": [
+        "把该执行的代码误写成注释。",
+        "完全不写注释，复习时看不懂自己的代码。"
+      ],
+      "miniExample": "# 输入半径并计算圆面积\nr = float(input())\nprint(3.14 * r * r)"
+    },
+    {
+      "id": "indent-colon",
+      "group": "基础语法",
+      "title": "缩进和冒号：代码块的边界",
+      "coreConcept": "if、for、while 后面通常要写冒号，下一行缩进表示属于这个代码块。",
+      "analogyTitle": "MOBA 类比：进入同一个战术区域",
+      "analogy": "缩进就像把队友圈进同一个战术区域。缩进里的代码属于同一个行动计划，不缩进的代码就已经退出这个计划。",
+      "mobaTip": "冒号表示“准备执行一组动作”，缩进表示“这些动作属于这组计划”。",
+      "codeMapping": [
+        {
+          "code": "if hp < 30:",
+          "meaning": "条件判断开始，冒号不能少"
+        },
+        {
+          "code": "    print('回城')",
+          "meaning": "缩进后属于 if 代码块"
+        },
+        {
+          "code": "print('继续观察')",
+          "meaning": "不缩进，已经离开 if 代码块"
+        }
+      ],
+      "commonMistakes": [
+        "if 后面忘记冒号。",
+        "缩进不一致，导致 IndentationError。",
+        "该缩进的语句没有缩进。"
+      ],
+      "miniExample": "x = int(input())\nif x > 0:\n    print('positive')\nprint('done')"
+    },
+    {
+      "id": "comparison-operators",
+      "group": "条件语句",
+      "title": "比较运算符：判断大小和相等",
+      "coreConcept": "比较运算符用于得到 True 或 False，例如 >、<、>=、<=、==、!=。",
+      "analogyTitle": "MOBA 类比：开团条件检查",
+      "analogy": "比较运算符就像开团前看条件：经济是否领先、血量是否足够、人数是否占优。满足就是 True，不满足就是 False。",
+      "mobaTip": "条件判断不是凭感觉，它要给出 True 或 False。== 是判断是否相等，不是赋值。",
+      "codeMapping": [
+        {
+          "code": "hp > 50",
+          "meaning": "血量是否大于 50"
+        },
+        {
+          "code": "level == 4",
+          "meaning": "等级是否等于 4"
+        },
+        {
+          "code": "gold != 0",
+          "meaning": "金币是否不等于 0"
+        }
+      ],
+      "commonMistakes": [
+        "把 == 写成 =。",
+        "搞混 >= 和 >。",
+        "中文符号混入代码。"
+      ],
+      "miniExample": "x = int(input())\nprint(x % 2 == 0)"
+    },
+    {
+      "id": "if-basic",
+      "group": "条件语句",
+      "title": "if：满足条件才执行",
+      "coreConcept": "if 用来判断条件是否成立，成立时才执行缩进里的代码。",
+      "analogyTitle": "MOBA 类比：进草前看视野",
+      "analogy": "if 就像进草丛前判断有没有视野。满足条件就执行行动，不满足就跳过这段操作。",
+      "mobaTip": "条件就是行动信号。信号没亮，就不要执行缩进里的代码。",
+      "codeMapping": [
+        {
+          "code": "if hp < 30:",
+          "meaning": "如果血量低于 30"
+        },
+        {
+          "code": "    print('回城')",
+          "meaning": "条件成立才输出"
+        }
+      ],
+      "commonMistakes": [
+        "if 后面没写条件。",
+        "忘记冒号。",
+        "if 下面没有缩进。"
+      ],
+      "miniExample": "x = int(input())\nif x > 0:\n    print('positive')"
+    },
+    {
+      "id": "if-else",
+      "group": "条件语句",
+      "title": "if else：二选一判断",
+      "coreConcept": "if else 表示条件成立走 if，不成立走 else，两条路只会选一条。",
+      "analogyTitle": "MOBA 类比：打还是撤",
+      "analogy": "if else 就像判断这波团能不能接。能接就上，不能接就撤，系统不会同时执行两套选择。",
+      "mobaTip": "else 不需要再写条件，它表示“上面条件不成立时的默认路线”。",
+      "codeMapping": [
+        {
+          "code": "if gold >= 1000:",
+          "meaning": "金币足够"
+        },
+        {
+          "code": "    print('买装备')",
+          "meaning": "走 if 路线"
+        },
+        {
+          "code": "else:",
+          "meaning": "否则"
+        },
+        {
+          "code": "    print('继续发育')",
+          "meaning": "走 else 路线"
+        }
+      ],
+      "commonMistakes": [
+        "else 后面写条件。",
+        "else 忘记冒号。",
+        "if 和 else 缩进不对齐。"
+      ],
+      "miniExample": "n = int(input())\nif n % 2 == 0:\n    print('even')\nelse:\n    print('odd')"
+    },
+    {
+      "id": "if-elif-else",
+      "group": "条件语句",
+      "title": "if elif else：多分支判断",
+      "coreConcept": "if elif else 用来处理多个条件，从上到下检查，命中一个分支后就不会继续执行后面的分支。",
+      "analogyTitle": "MOBA 类比：根据局势选策略",
+      "analogy": "多分支判断就像根据局势选择策略：优势推塔，均势清线，劣势守家。系统从上往下判断，先命中哪个就执行哪个。",
+      "mobaTip": "elif 是“否则如果”。多个条件有优先级，最严格或最想优先判断的条件通常放前面。",
+      "codeMapping": [
+        {
+          "code": "if score >= 90:",
+          "meaning": "第一档条件"
+        },
+        {
+          "code": "elif score >= 75:",
+          "meaning": "第二档条件"
+        },
+        {
+          "code": "else:",
+          "meaning": "都不满足时的路线"
+        }
+      ],
+      "commonMistakes": [
+        "把 elif 写成 else if。",
+        "多个 if 全部独立写，导致多个分支可能同时执行。",
+        "条件顺序放错，例如先判断 score >= 60 再判断 score >= 90。"
+      ],
+      "miniExample": "score = int(input())\nif score >= 90:\n    print('A')\nelif score >= 75:\n    print('B')\nelif score >= 60:\n    print('C')\nelse:\n    print('D')"
+    },
+    {
+      "id": "logical-operators",
+      "group": "条件语句",
+      "title": "and / or / not：组合条件",
+      "coreConcept": "and 表示两个条件都要成立，or 表示至少一个成立，not 表示取反。",
+      "analogyTitle": "MOBA 类比：开团前多条件确认",
+      "analogy": "and 像开团前要求人数和经济都够；or 像有大招或队友支援任意满足一个就能行动；not 像确认敌人不在附近才安全清线。",
+      "mobaTip": "and 更严格，or 更宽松，not 会把 True 和 False 反过来。",
+      "codeMapping": [
+        {
+          "code": "hp > 50 and mana > 30",
+          "meaning": "血量和蓝量都够"
+        },
+        {
+          "code": "gold >= 1000 or level >= 4",
+          "meaning": "金币够或等级够"
+        },
+        {
+          "code": "not enemy_near",
+          "meaning": "敌人不在附近"
+        }
+      ],
+      "commonMistakes": [
+        "把 and 当成 or 使用。",
+        "条件过长没有加括号，自己读不清。",
+        "中文“并且”“或者”写进代码。"
+      ],
+      "miniExample": "age = int(input())\nif age >= 18 and age <= 60:\n    print('valid')"
+    },
+    {
+      "id": "nested-if",
+      "group": "条件语句",
+      "title": "嵌套 if：条件里面再判断",
+      "coreConcept": "嵌套 if 是在一个条件成立后，再继续判断下一层条件。",
+      "analogyTitle": "MOBA 类比：先看能不能打，再看怎么打",
+      "analogy": "嵌套 if 像先判断能不能接团，如果能接，再判断是先打龙还是先推塔。外层条件没成立，内层判断根本不会开始。",
+      "mobaTip": "嵌套别太深。每多一层缩进，就多一层战术判断，写乱了很容易迷路。",
+      "codeMapping": [
+        {
+          "code": "if hp > 50:",
+          "meaning": "第一层判断"
+        },
+        {
+          "code": "    if mana > 30:",
+          "meaning": "第二层判断"
+        },
+        {
+          "code": "        print('释放技能')",
+          "meaning": "两层都满足才执行"
+        }
+      ],
+      "commonMistakes": [
+        "缩进层级看错。",
+        "内层条件其实应该和外层用 and 合并。",
+        "else 对应错 if。"
+      ],
+      "miniExample": "x = int(input())\nif x > 0:\n    if x % 2 == 0:\n        print('positive even')"
+    },
+    {
+      "id": "while-loop",
+      "group": "循环语句",
+      "title": "while：条件成立就一直循环",
+      "coreConcept": "while 会在条件成立时反复执行代码块，直到条件不成立。",
+      "analogyTitle": "MOBA 类比：兵线没清完就继续补刀",
+      "analogy": "while 就像只要兵线还没清完，就继续补刀。兵线清完后，循环结束，进入下一步行动。",
+      "mobaTip": "while 必须有让条件变化的语句，否则会一直循环，像在原地无限补空气刀。",
+      "codeMapping": [
+        {
+          "code": "while i <= n:",
+          "meaning": "只要 i 还没超过 n 就继续"
+        },
+        {
+          "code": "    total += i",
+          "meaning": "累加当前数字"
+        },
+        {
+          "code": "    i += 1",
+          "meaning": "更新条件，避免死循环"
+        }
+      ],
+      "commonMistakes": [
+        "忘记 i += 1 导致死循环。",
+        "循环条件写错，少算或多算一次。",
+        "while 后面忘记冒号。"
+      ],
+      "miniExample": "i = 1\ntotal = 0\nwhile i <= 5:\n    total += i\n    i += 1\nprint(total)"
+    },
+    {
+      "id": "for-range",
+      "group": "循环语句",
+      "title": "for + range：按次数循环",
+      "coreConcept": "for i in range(...) 用来按照指定范围重复执行，适合次数明确的循环。",
+      "analogyTitle": "MOBA 类比：按顺序清几波兵",
+      "analogy": "for + range 就像计划清第 1 波到第 n 波兵，每一波都执行一次固定动作。范围定好了，循环次数也就定了。",
+      "mobaTip": "range 的右边界取不到。range(1, 6) 是 1 到 5，不包含 6。",
+      "codeMapping": [
+        {
+          "code": "for i in range(1, 6):",
+          "meaning": "i 依次取 1、2、3、4、5"
+        },
+        {
+          "code": "    print(i)",
+          "meaning": "每轮输出当前 i"
+        },
+        {
+          "code": "range(n)",
+          "meaning": "默认从 0 到 n-1"
+        }
+      ],
+      "commonMistakes": [
+        "误以为 range(1, 6) 包含 6。",
+        "for 后面忘记冒号。",
+        "循环体没有缩进。"
+      ],
+      "miniExample": "for i in range(1, 6):\n    print(i)"
+    },
+    {
+      "id": "accumulator",
+      "group": "循环语句",
+      "title": "累加器：循环里不断加总",
+      "coreConcept": "累加器通常先设为 0，然后在循环中不断加上新值。",
+      "analogyTitle": "MOBA 类比：经济一点点滚起来",
+      "analogy": "累加器像金币经济，从 0 开始，每补一次兵就增加一点。循环结束后，total 记录的就是整段发育的总收益。",
+      "mobaTip": "先初始化，再循环累加。没有初始值，就像经济面板不存在，后面没法统计。",
+      "codeMapping": [
+        {
+          "code": "total = 0",
+          "meaning": "先准备总数"
+        },
+        {
+          "code": "total += i",
+          "meaning": "每轮把 i 加进去"
+        },
+        {
+          "code": "print(total)",
+          "meaning": "输出最终总和"
+        }
+      ],
+      "commonMistakes": [
+        "忘记 total = 0。",
+        "把 total = total + i 写到循环外面。",
+        "每轮错误地把 total 重新赋值为 0。"
+      ],
+      "miniExample": "n = int(input())\ntotal = 0\nfor i in range(1, n + 1):\n    total += i\nprint(total)"
+    },
+    {
+      "id": "counter",
+      "group": "循环语句",
+      "title": "计数器：统计出现次数",
+      "coreConcept": "计数器用于统计满足条件的次数，通常从 0 开始，每遇到一次就加 1。",
+      "analogyTitle": "MOBA 类比：统计补刀数",
+      "analogy": "计数器像补刀数统计，不是每个小兵都算，只有你成功补到才 +1。代码里也是只有满足条件时，count 才增加。",
+      "mobaTip": "计数器关注次数，累加器关注总和。一个数人头，一个数经济，别混。",
+      "codeMapping": [
+        {
+          "code": "count = 0",
+          "meaning": "先准备计数"
+        },
+        {
+          "code": "if x > 0:",
+          "meaning": "判断是否满足条件"
+        },
+        {
+          "code": "    count += 1",
+          "meaning": "满足就次数加 1"
+        }
+      ],
+      "commonMistakes": [
+        "把 count += 1 写在 if 外面，导致每次都加。",
+        "计数器和累加器混用。",
+        "忘记初始化 count。"
+      ],
+      "miniExample": "count = 0\nfor i in range(5):\n    x = int(input())\n    if x > 0:\n        count += 1\nprint(count)"
+    },
+    {
+      "id": "break-control",
+      "group": "循环控制",
+      "title": "break：立刻结束循环",
+      "coreConcept": "break 会直接跳出当前循环，不再继续后面的循环轮次。",
+      "analogyTitle": "MOBA 类比：发现敌方多人包夹，直接撤退",
+      "analogy": "break 就像你正在清线，突然发现敌方多人包过来，当前行动直接结束。不是跳过一个小兵，而是整波行动都不继续了。",
+      "mobaTip": "break 是结束循环，不是结束整个程序。它通常用于找到目标、遇到危险、提前停止。",
+      "codeMapping": [
+        {
+          "code": "if x == 0:",
+          "meaning": "遇到停止信号"
+        },
+        {
+          "code": "    break",
+          "meaning": "立刻跳出循环"
+        }
+      ],
+      "commonMistakes": [
+        "把 break 当成跳过本轮使用。",
+        "break 写在循环外面会报错。",
+        "多层循环中，break 只跳出最近的一层循环。"
+      ],
+      "miniExample": "while True:\n    x = int(input())\n    if x == 0:\n        break\n    print(x)"
+    },
+    {
+      "id": "continue-control",
+      "group": "循环控制",
+      "title": "continue：跳过本轮，继续下一轮",
+      "coreConcept": "continue 会跳过本轮循环剩下的代码，直接进入下一轮判断或下一次取值。",
+      "analogyTitle": "MOBA 类比：这个目标不值得打，换下一个",
+      "analogy": "continue 就像你看到一个不值得处理的目标，直接跳过它，继续看下一个目标。行动没有结束，只是本轮不做了。",
+      "mobaTip": "continue 不是撤退，它只是跳过当前目标。循环还会继续。",
+      "codeMapping": [
+        {
+          "code": "if x < 0:",
+          "meaning": "如果当前数字不符合要求"
+        },
+        {
+          "code": "    continue",
+          "meaning": "跳过本轮后续操作"
+        },
+        {
+          "code": "print(x)",
+          "meaning": "只有没被跳过才输出"
+        }
+      ],
+      "commonMistakes": [
+        "把 continue 当成 break。",
+        "continue 后面的本轮代码不会执行。",
+        "在 while 中使用 continue 前忘记更新变量，可能死循环。"
+      ],
+      "miniExample": "for i in range(1, 6):\n    if i == 3:\n        continue\n    print(i)"
+    },
+    {
+      "id": "pass-control",
+      "group": "循环控制",
+      "title": "pass：先占位，什么都不做",
+      "coreConcept": "pass 是空语句，用来占位，保证语法完整，但执行时什么也不发生。",
+      "analogyTitle": "MOBA 类比：先标记路线，暂时不行动",
+      "analogy": "pass 就像你先在地图上标了一个计划点，但这一步暂时不执行操作。它不是撤退，也不是跳过循环，只是占个位置。",
+      "mobaTip": "pass 常用于代码还没写完时先占位，避免语法报错。",
+      "codeMapping": [
+        {
+          "code": "if x > 0:",
+          "meaning": "条件结构已经写好"
+        },
+        {
+          "code": "    pass",
+          "meaning": "这里暂时不做事"
+        }
+      ],
+      "commonMistakes": [
+        "误以为 pass 会跳过循环。",
+        "把 pass 当成 break 或 continue。",
+        "正式代码里忘记替换 pass。"
+      ],
+      "miniExample": "x = int(input())\nif x > 0:\n    pass\nelse:\n    print('not positive')"
+    },
+    {
+      "id": "mod-even-odd",
+      "group": "综合模板",
+      "title": "% 取余：判断奇偶",
+      "coreConcept": "% 可以得到除法的余数，判断 n % 2 是否等于 0 常用于判断偶数。",
+      "analogyTitle": "MOBA 类比：按两人一组分队",
+      "analogy": "取余像把玩家按固定人数分组后看剩下几个。n % 2 == 0 表示两两分组刚好没有剩余，所以是偶数。",
+      "mobaTip": "判断奇偶的常用模板是 n % 2 == 0。余数为 0 是偶数，否则是奇数。",
+      "codeMapping": [
+        {
+          "code": "n % 2",
+          "meaning": "n 除以 2 的余数"
+        },
+        {
+          "code": "n % 2 == 0",
+          "meaning": "判断是否为偶数"
+        },
+        {
+          "code": "n % 2 != 0",
+          "meaning": "判断是否为奇数"
+        }
+      ],
+      "commonMistakes": [
+        "把 / 当成 % 使用。",
+        "误以为 n / 2 == 0 可以判断偶数。",
+        "忘记 == 是判断相等。"
+      ],
+      "miniExample": "n = int(input())\nif n % 2 == 0:\n    print('even')\nelse:\n    print('odd')"
+    },
+    {
+      "id": "max-two-numbers",
+      "group": "综合模板",
+      "title": "两个数比较：找较大值",
+      "coreConcept": "用 if else 比较两个数，根据条件输出其中较大的一个。",
+      "analogyTitle": "MOBA 类比：谁战力高谁先上",
+      "analogy": "比较两个数像比较两个英雄当前战力。谁的数值更高，就选择谁作为输出结果。",
+      "mobaTip": "比较类题目先想清楚条件：a > b 时输出 a，否则输出 b。",
+      "codeMapping": [
+        {
+          "code": "if a > b:",
+          "meaning": "如果 a 更大"
+        },
+        {
+          "code": "    print(a)",
+          "meaning": "输出 a"
+        },
+        {
+          "code": "else:",
+          "meaning": "否则输出 b"
+        }
+      ],
+      "commonMistakes": [
+        "把输入的两个数当字符串比较。",
+        "忘记 int() 转换。",
+        "else 分支漏写。"
+      ],
+      "miniExample": "a = int(input())\nb = int(input())\nif a > b:\n    print(a)\nelse:\n    print(b)"
+    },
+    {
+      "id": "sum-1-to-n",
+      "group": "综合模板",
+      "title": "1 到 n 求和",
+      "coreConcept": "先输入 n，再用循环从 1 加到 n，最后输出 total。",
+      "analogyTitle": "MOBA 类比：从第 1 波兵发育到第 n 波",
+      "analogy": "1 到 n 求和像按顺序清第 1 到第 n 波兵，每清一波就把收益加到总经济 total 里。",
+      "mobaTip": "这类题的骨架是：输入 n、total = 0、循环、累加、输出。",
+      "codeMapping": [
+        {
+          "code": "total = 0",
+          "meaning": "总和从 0 开始"
+        },
+        {
+          "code": "for i in range(1, n + 1):",
+          "meaning": "i 从 1 到 n"
+        },
+        {
+          "code": "total += i",
+          "meaning": "每轮加上当前 i"
+        }
+      ],
+      "commonMistakes": [
+        "range(1, n) 少算 n。",
+        "total 初始化写在循环里面。",
+        "循环结束前就 print，导致输出过程值而不是最终值。"
+      ],
+      "miniExample": "n = int(input())\ntotal = 0\nfor i in range(1, n + 1):\n    total += i\nprint(total)"
+    },
+    {
+      "id": "menu-choice",
+      "group": "综合模板",
+      "title": "菜单选择：根据编号执行功能",
+      "coreConcept": "输入一个选项编号，用 if elif else 执行不同功能。",
+      "analogyTitle": "MOBA 类比：选择战术指令",
+      "analogy": "菜单选择像队伍指挥发战术：1 表示推塔，2 表示清线，3 表示回防。不同编号触发不同路线。",
+      "mobaTip": "菜单题重点是分支清楚。编号匹配哪个分支，就执行哪个功能。",
+      "codeMapping": [
+        {
+          "code": "choice = int(input())",
+          "meaning": "读取选项"
+        },
+        {
+          "code": "if choice == 1:",
+          "meaning": "选择功能 1"
+        },
+        {
+          "code": "elif choice == 2:",
+          "meaning": "选择功能 2"
+        },
+        {
+          "code": "else:",
+          "meaning": "无效选项或默认处理"
+        }
+      ],
+      "commonMistakes": [
+        "用 = 判断编号。",
+        "忘记把输入转成 int。",
+        "多个分支都用 if，导致逻辑不够清晰。"
+      ],
+      "miniExample": "choice = int(input('请输入选项：'))\nif choice == 1:\n    print('attack')\nelif choice == 2:\n    print('clear')\nelse:\n    print('unknown')"
+    },
+    {
+      "id": "list-basic",
+      "group": "基础数据",
+      "title": "列表：一组有顺序的数据",
+      "coreConcept": "列表 list 可以保存多个数据，数据有顺序，可以通过下标访问。",
+      "analogyTitle": "MOBA 类比：背包格子",
+      "analogy": "列表像背包里的多个格子，每个格子有自己的位置。items[0] 访问的是第一个格子，不是第零件装备的意思。",
+      "mobaTip": "Python 下标从 0 开始。第一个元素是 list[0]，第二个是 list[1]。",
+      "codeMapping": [
+        {
+          "code": "items = [100, 200, 300]",
+          "meaning": "创建列表"
+        },
+        {
+          "code": "items[0]",
+          "meaning": "访问第一个元素"
+        },
+        {
+          "code": "len(items)",
+          "meaning": "得到列表长度"
+        }
+      ],
+      "commonMistakes": [
+        "下标从 1 开始数。",
+        "访问超出范围的下标。",
+        "把列表和字符串混淆。"
+      ],
+      "miniExample": "nums = [3, 5, 7]\nprint(nums[0])\nprint(len(nums))"
+    },
+    {
+      "id": "list-loop",
+      "group": "基础数据",
+      "title": "遍历列表：逐个处理元素",
+      "coreConcept": "for x in list 可以依次取出列表中的每个元素。",
+      "analogyTitle": "MOBA 类比：逐个检查背包装备",
+      "analogy": "遍历列表像打开背包逐个检查装备。每轮拿出一个元素，处理完再看下一个。",
+      "mobaTip": "遍历时 x 表示当前元素，不是整个列表。每一轮 x 都会变成新的元素。",
+      "codeMapping": [
+        {
+          "code": "for x in nums:",
+          "meaning": "依次取出 nums 里的元素"
+        },
+        {
+          "code": "    print(x)",
+          "meaning": "处理当前元素"
+        }
+      ],
+      "commonMistakes": [
+        "在循环中误把 x 当成下标。",
+        "忘记缩进循环体。",
+        "修改列表时不清楚当前遍历逻辑。"
+      ],
+      "miniExample": "nums = [1, 2, 3]\nfor x in nums:\n    print(x)"
+    }
+  ]
+}

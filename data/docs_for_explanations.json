@@ -1,0 +1,1895 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "index.html const docs",
+  "questions": [
+    {
+      "questionId": "week9-Q01",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 1,
+      "displayId": "Q01",
+      "title": "1. 利用海伦公式计算三角形的面积（对于不符合三角形两边和大于第三边规则的情况，要给出提示） 。 海伦公式： 三角形面积=!𝑝(𝑝−𝑎)(𝑝−𝑏)(𝑝−𝑐)，其中a、b、c为三角形三边长，p为三角形周长的一半。 （教材P13）",
+      "codeBlocks": [
+        "方法一：\nimport math\na=eval(input(\"请输入a边长:\"))\nb=eval(input(\"请输入b边长:\"))\nc=eval(input(\"请输入c边长:\"))\nif a+b>c and a+c>b and b+c>a:\np=(a+b+c)/2\ns=math.sqrt(p*(p-a)*(p-b)*(p-c))\nprint(\"三角形的面积是{:.3f}\".format(s))\nelse:\nprint(\"不符合两边和大于第三边的原则\")\n方法二：\nimport math\na=eval(input(\"a=\"))\nb=eval(input(\"b=\"))\nc=eval(input(\"c=\"))\np=(a+b+c)/2\nif a+b>c and a+c>b and b+c>a:\ns=math.sqrt(p*(p-a)*(p-b)*(p-c))\nprint(\"三角形面积为：\",s)\nelse:\nprint(\"无法构成三角形\")\nc=0的参数a、b、c，计算并输出方程的实数根（结果保留两位小数） 。若方程没有实数根，输出：方程没有实数根。"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q02",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 2,
+      "displayId": "Q02",
+      "title": "2. 输入一元二次方程ax2 +bx+",
+      "codeBlocks": [
+        "方法一：\nimport math\na=eval(input(\"请输入参数a：\"))"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q03",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 3,
+      "displayId": "Q03",
+      "title": "3. 一只大象口渴了，要喝20升水才能解渴，但现在只有一个深h厘米，底面半径为r厘米的小圆桶(h和r都是整数)。问大象至少要喝多少桶水才会解渴。输入两个整数（不考虑输入异常） ， 分别表示小圆桶的深h和底面半径r，单 位 都 是 厘 米 。输 出 一 个 整 数 ，表 示 大 象 至少要喝水的桶数。",
+      "codeBlocks": [
+        "b=eval(input(\"请输入参数b：\"))\nc=eval(input(\"请输入参数c：\"))\np=b*b-4*a*c\nif p>=0:\nx1=(-b+math.sqrt(p))/2*a\nx2=(-b-math.sqrt(p))/2*a\nprint(\"方程的两个实数根为：{:.2f}和{:.2f}\".format(x1,x2))\nelse:\nprint(\"方程没有实数根\")\n方法二：\nimport math\na=eval(input(\"a=\"))\nb=eval(input(\"b=\"))\nc=eval(input(\"c=\"))\np=b**2-4*a*c\nif p>=0:\nx1=(-b+math.sqrt(p))/(2*a)\nx2=(-b-math.sqrt(p))/(2*a)\nprint(\"方程的两个实数根分别为{:.2f}和{:.2f}\".format(x1,x2))\nelse:\nprint(\"方程没有实数根\")",
+        "Pi=3.14) 1升 = 1000毫升 1毫升 = 1 立方厘米"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q04",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 4,
+      "displayId": "Q04",
+      "title": "4. 根据邮件的重量和用户是否选择加急计算邮费。 计算规则： 重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，不足500克部分按500克计算。另外，如果用户选择加急，多收5元。 输入一个整数表示重量 （单位为克） ， 输入一个字符表示是否加急。 …",
+      "codeBlocks": [
+        "r=eval(input(\"请输入桶的底面半径\"))\nh=eval(input(\"请输入桶的高\"))\nv=3.14*r*r*h/1000\nif 20/v==20//v:\namount=20/v\nelse:\namount=20//v+1\nprint(\"大象需要喝{:.0f}桶水\".format(amount))\n方法二：\nr=int(input(\"桶底面半径：\"))\nh=int(input(\"桶高：\"))\nv=3.14*r**2*h #桶的体积\nif 20000%v==0:\nn=20000/v\nelse:\nn=20000//v+1\nprint(\"大象要喝{}桶水\".format(int(n)))",
+        "import math\nw=int(input(\"请输入重量：\"))\nf=input(\"是否加急（y：加急，n:不加急)\")\nif w<=1000:\nfee=8*w\nelse:\nfee=1000*8+math.ceil((w-1000)/500)*4",
+        "f=='y':\nfee+=5"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q05",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 5,
+      "displayId": "Q05",
+      "title": "5. 将一个三位正整数反向输出。",
+      "codeBlocks": [
+        "方法一：\nn=567\nx=n%10\ny=n//10%10\nz=n//100\nm=x*100+y*10+z\nprint(m)\n方法二：\nx=int(input(\"输入一个三位正整数：\"))\na=x%10\nb=x//10%10\nc=x//100\nprint(a,b,c)"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q06",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 6,
+      "displayId": "Q06",
+      "title": "6. 李老师购买了一批铅笔， 平均分给班级中的同学， 输入铅笔数量和班级学生人数， 计算并输出每人分得几只铅笔，余几只？",
+      "codeBlocks": [
+        "x=int(input(\"请输入铅笔数量：\"))\ny=int(input(\"请输入班级人数：\"))\nprint(\"每人分得{}支铅笔，余{}支\".format(x//y,x%y))"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q07",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 7,
+      "displayId": "Q07",
+      "title": "7. 输入一个正整数，输出该数是“奇数”还是“偶数” 。",
+      "codeBlocks": [
+        "print(fee)",
+        "number=int(input(\"请输入一个整数：\"))\nif number%2==0: #或\nif int(number/2)==number/2:\nprint(\"偶数\")\nelse:\nprint(\"奇数\")"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q08",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 8,
+      "displayId": "Q08",
+      "title": "8. 输入两个数，做除法，要考虑除数不能为零的情况。",
+      "codeBlocks": [
+        "x = eval(input(\"被除数：\"))\ny = eval(input(\"除数：\"))\nif y != 0:\n    print(x / y)\nelse:\n    print(\"除数不能为零\")"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q09",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 9,
+      "displayId": "Q09",
+      "title": "9. 从键盘交互式输入一个人的18位的身份证号， 以类似于 “2001年09月12日” 的形式输出该人的出生日期。",
+      "codeBlocks": [
+        "idnum=\"210104200109187655\"\nidnum=input(\"请输入一个18位身份证号\")\nprint(idnum[6:10]+'年'+idnum[10:12]+\"月\"+idnum[12:14]+\"日\")"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q10",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 10,
+      "displayId": "Q10",
+      "title": "10. （情况一）输入温度，形式为99.5C或-100.46F，若输入温度以字符c或C结尾表示摄氏温度，请将其转换为华氏温度；若以f或F结尾表示华氏温度，请将其转换为摄氏温度。输出结果保留两位小数。 要求： （1）一次性输入温度数值及其后的字符，不允许分两次分别输入数值和结尾字符； （2）注意字符串…",
+      "codeBlocks": [
+        "C = ( F - 32 ) / 1.8\nF = C * 1.8 + 32",
+        "t=input(\"请输入温度（C开头为摄氏度，F开头为华氏度） ：\")\nif t[0]=='F':\nc=(float(t[1:])-32)/1.8\nprint(\"转换成摄氏温度为：{:.2f}\".format(c))\nelse:\nf=float(t[1:])*1.8+32\nprint(\"转换成华氏温度为：{:.2f}\".format(f)) ）"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q11",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 11,
+      "displayId": "Q11",
+      "title": "11. 完成一个模拟登录的程序。输入一个用户名，判断用户名是否正确，假设正确的用户名是“user”。 注意：(1)判断用户名是否正确时，不区分大小写；(2)输入的用户名如两边有空格，去除空格后再进行判断。",
+      "codeBlocks": [
+        "correct_username = \"user\"\nusername = input(\"请输入用户名：\").strip()\nif username.lower() == correct_username:\n    print(\"登录成功！\")\nelse:\n    print(\"用户名错误，请重试。\")"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q12",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 12,
+      "displayId": "Q12",
+      "title": "12. 输入一个电子邮件，如果其中包含”@”，输出”@”后的字符信息，否则输出：非法的电子邮件格式。",
+      "codeBlocks": [
+        "email = input(\"请输入电子邮件：\").strip() # 去除前后空格\nif '@' in email: # 分割字符串并获取@后的部分\nat_index = email.index('@')\ndomain = email[at_index + 1:]\nprint(\"@后的字符信息：{}\".format(domain)) # 使用format格式化输出\nelse:\nprint(\"非法的电子邮件格式\")\ns1=\" my python program \"，利用字符串处理函数或方法完成下列操作： （1）去掉字符串s1首尾空格 （2）计算字符串长度 （3）字符串大小写转换 （4）字符串的索引和查找函数 （5）字符串切片：切单个字符；切子串 （6）字 符 串 的 拆 分 与 合 并 函 数 ：将s2= \"my python program\"根据空格分隔拆分成列表ls，在将列表ls中的元素合并成一个字符串，合并结果为\"my##python##program\"。"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q13",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 13,
+      "displayId": "Q13",
+      "title": "13. 给定字符串",
+      "codeBlocks": [
+        "CORRECT_USERNAME = \"user\" # 获取用户输入并处理\ninput_username = input(\"请输入用户名：\").strip() # 去除前后空格 # 不区分大小写比较\nif input_username.lower() == CORRECT_USERNAME.lower():\nprint(\"登录成功！\")\nelse:\nprint(\"用户名错误，请重试。\")",
+        "s1=\" my python program \"\ns2=s1.strip() #去掉字符串s1首尾空格\nprint(\"去掉首尾空格后s2为：\",s2)",
+        "print(\"s2的长度为：\",len(s2)) #输出字符串s2的长度\nprint(\"将s2全部转换为大写：\",s2.upper()) #将s2中所有小写字符转换为大写\nif s2.find(\"python\")==-1: #输出单词python在s2中的索引位置\nprint(\"s2中没有python这个词\")\nelse:\nprint(\"python在s2中的位置为：\",s2.find(\"python\"))\ns3=s2.replace(' ',',') #将s2中的所有空格替换为英文逗号，赋值给s3\nprint(s3)\nprint(\"对s3进行正向字符串切片获取单词python：\",s3[3:9])\nls=s3.split(',') #将s3进行分隔，返回包含三个字符串my、python、program的字符串列表\nprint(ls) 14.给定一个只包括字符和空格的句子，将句子中的单词位置反转后输出。输入的句子占一行，各个单词之间以空格分隔。例如，输入this is a test，输出test a is this。",
+        "方法一：\ns=input(\"请输入句子，单词之间以空格分隔：\")\na=s.split()\nwords =a[::-1]\nresult = \"\"\nfor word in words:\nresult += word + \" \" # 逐个拼接单词和空格\nprint(result.strip()) # 去除末尾多余空格\n方法二：\ns=input(\"请输入句子，单词之间以空格分隔：\")\na=s.split()\na=a[::-1]\nprint(\" \".join(a))",
+        "sentence = input(\"请输入一个只包含字符和空格的句子：\") # 将句子按空格拆分为单词列表"
+      ],
+      "sourcePages": [
+        7,
+        8
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q15",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 15,
+      "displayId": "Q15",
+      "title": "15、输入一个字符串表示某员工一周5天的出勤情况，形式为AppaL，其中A(大小写均可)表示缺勤，L(大小写均可)表示迟到，P(大小写均可)表示出勤，如果不大于一次缺勤且不超过两次迟到，输出“合格” ，否则输出“不合格” 。",
+      "codeBlocks": [
+        "attend=input(\"请输入员工一周的出勤情况：\")\nattend=attend.upper()\nif attend.count('A')<=1 and attend.count('L')<=2:\nprint(\"合格\")\nelse:\nprint(\"不合格\")"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q16",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 16,
+      "displayId": "Q16",
+      "title": "16、 输入三科成绩，计算平均分和总分。",
+      "codeBlocks": [
+        "x=eval(input(\"请输入A科成绩：\"))\ny=eval(input(\"请输入B科成绩：\"))\nz=eval(input(\"请输入C科成绩：\"))\nprint(\"3科成绩的平均分是{}，总分是{}\".format((x+y+z)/3,x+y+z))"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q17",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 17,
+      "displayId": "Q17",
+      "title": "17、编写程序，给出一个英文句子，统计单词个数。",
+      "codeBlocks": [
+        "sentence='''resident Xi Jinping urged all-out efforts to achieve the goal of eliminating poverty in China within two years in his three-day inspection tour of Chongqing, which ended on Wednesday. '''\nsentence = sentence.replace(\",\", \" \") # 替换所有逗号为空格\nsentence = sentence.replace(\".\", \" \") # 替换所有句号为空格\nwords = sentence.split() # 按空格分割字符串，生成单词列表\nprint(len(words))"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q18",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 18,
+      "displayId": "Q18",
+      "title": "18、编写程序，给出一个字符串，将其中的字符“E“用空格替换后输出。",
+      "codeBlocks": [
+        "sentence='''residEnt Xi Jinping urgEd all-out Efforts'''\nprint(sentence.replace(\"E\",\" \"))"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q19",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 19,
+      "displayId": "Q19",
+      "title": "19、输入一个英文字符，如果该字符为小写，转换为大写输出，否则，直接输出“该字符为大写字符”。",
+      "codeBlocks": [
+        "words = sentence.split() # 使用reverse()方法反转单词列表 words.reverse() # 将反转后的单词列表合并为字符串\nreversed_sentence = ' '.join(words)\nprint(reversed_sentence)"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q20",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 20,
+      "displayId": "Q20",
+      "title": "20. 判断输入的一个整数n 能否同时被3和5整除，如果能同时被3和5整除输出YES，否则输出NO。",
+      "codeBlocks": [
+        "n=int(input(\"请输入一个整数：\"))\nif n%3==0 and n%5==0:\nprint(\"YES\")\nelse:\nprint(\"NO\")"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q21",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 21,
+      "displayId": "Q21",
+      "title": "21. 根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，不足500克部分按500克计算。如果用户选择加急，多收5元。 输入一个整数表示重量 （单位为克） ， 输入一个字符表示是否加急。 如果字符…",
+      "codeBlocks": [
+        "import math\n\nweight = int(input(\"请输入重量（克）：\"))\nurgent = input(\"是否加急（y/n）：\").strip().lower()\n\nfee = 8\nif weight > 1000:\n    extra_weight = weight - 1000\n    fee += math.ceil(extra_weight / 500) * 4\n\nif urgent == \"y\":\n    fee += 5\n\nprint(\"邮费为{}元\".format(fee))"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q22",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 22,
+      "displayId": "Q22",
+      "title": "22. 输入学生某门课程成绩 （百分制） ， 输出其成绩等级。 若输入成绩小于0或大于100，",
+      "codeBlocks": [
+        "score = float(input(\"请输入学生成绩（百分制） ：\")) # 判断成绩等级\nif score < 0 or score > 100:\nprint(\"输入错误\")\nelif score >= 85:\nprint(\"优秀\")\nelif score >= 70:\nprint(\"良好\")\nelif score >= 60:\nprint(\"合格\")\nelse:\nprint(\"不合格\") 23 骑车与走路。在大学校园里，没有自行车，上课办事会很不方便。但实际上，并非去办任何事情都是骑车快，因为骑车总要找车、开锁、停车、锁车等，这要耽误一些时间。假设找到自行车，开锁并骑上自行车的时间为27秒；停车锁车的时间为23秒；步行每秒行走1.2米，骑车每秒行走3.0米。请判断走不同的距离去办事，是骑车快还是走路快。 输入：输入一个整数，表示一次办事要行走的距离，单位为米。 输出：如果骑车快，输出“Bike”； 如 果 走 路 快 ， 输 出 “Walk”； 如 果 一 样 快 ， 输 出\"All\"。"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q24",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 24,
+      "displayId": "Q24",
+      "title": "24、根据输入的成绩数值（百分制） ，输出对应的等级，等级标准如下。 成绩在60以下：等级为D 成绩在60（含）到70之间：等级为C 成绩在70（含）到85之间：等级为B 成绩在85（含）以上：等级为A",
+      "codeBlocks": [
+        "score=float(input(\"请输入成绩（百分制):\"))\nif score<60:\nprint('D')\nelif score<70: #elif 60<=score<70\nprint('C')\nelif score<85: #elif 70<=score<85\nprint('B')\nelse:\nprint('A')"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q25",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 25,
+      "displayId": "Q25",
+      "title": "25、计算1-100之间偶数的和，设置输出结果为整数，宽度为8，居中对齐，空白处填充符号’*’。",
+      "codeBlocks": [
+        "s=0\nfor i in range(2,101,2):\ns+=i\nprint(\"1到100之间的偶数和为：{0:*^8d}\".format(s))"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q26",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 26,
+      "displayId": "Q26",
+      "title": "26、计算1到100中既能被3又能被5整除的数字的个数。",
+      "codeBlocks": [
+        "x=int(input(\"请输入距离：\"))\nt1=x/1.2\nt2=x/3.0+27+23\nif t1>t2:\nprint(\"Bike\")\nelif t1<t2:\nprint(\"Walk\")\nelse:\nprint(\"All\")",
+        "n=0\nfor i in range(1,101):\nif i%3==0 and i%5==0:\nprint(i)\nn+=1\nprint(\"1到100之间有{}个既能被3又能被5整数的数字：\".format(n))"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q27",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 27,
+      "displayId": "Q27",
+      "title": "27、输入n个数，输出其中的最小值。",
+      "codeBlocks": [
+        "n = int(input(\"请输入数字的个数：\"))\nif n <= 0:\nprint(\"无效输入！\")\nelse:\nmin_num = float(input(\"请输入第1个数字：\")) # 先读取第一个数\nfor i in range(2, n + 1): # 从第2个数字开始读取\nnum = float(input(\"请输入第{}个数：\".format(i)))\nif num < min_num:\nmin_num = num\nprint(\"输入的{}个数中最小值为：{}\".format(n,min_num))"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q28",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 28,
+      "displayId": "Q28",
+      "title": "28、输入一个字符串，计算分别其中小写字符、大写字符、数字、其他字符的个数。",
+      "codeBlocks": [
+        "s=input(\"请输入一串字符：\")\nnum_lower=num_upper=num_digit=other=0\nfor n in s:\nif 'a'<=n<='z': #或",
+        "num_lower+=1\nelif 'A'<=n<='Z': #或",
+        "num_upper+=1\nelif '0'<=n<='9': #或",
+        "num_digit+=1\nelse:\nother+=1\nprint(\"小写字符{}个\\n大写字符{}个\\n数字{}个\\n其他字符{}个\".format(num_lower,num_upper,num_digit,other))"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q29",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 29,
+      "displayId": "Q29",
+      "title": "29、输入一个正整数，将其倒序输出，如输入78961，输出16987；输入8900，输出0098。",
+      "codeBlocks": [
+        "n = input(\"请输入一个正整数：\")\nreversed_n = n[::-1] # 使用字符串切片反转\nprint(reversed_n)",
+        "n = input(\"请输入一个正整数：\")\nreversed_n = \"\"\nfor ch in n:\nreversed_n = ch + reversed_n # 将每个字符加到结果字符串前面\nprint(reversed_n)"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q30",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 30,
+      "displayId": "Q30",
+      "title": "30、有 一 分 数 序 列 ：2/1，3/2，5/3，8/5，13/8，21/13......，计 算 它 们 的 和 ，直 到 大 于20为止，输出这期间至少需要累加多少个数。",
+      "codeBlocks": [
+        "b=2,1\ns=0\nn=0\nwhile s<=20:\ns+=a/b a,b=a+b,a\nn+=1\nprint(\"累加到大于20至少需要{}个数字\".format(n))"
+      ],
+      "sourcePages": [
+        13
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q31",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 31,
+      "displayId": "Q31",
+      "title": "31、输入一组三位正整数， 输入-1表示输入结束， 输出这组数中水仙花数的个数。 水仙花数是这样一种数：它是三位正整数，它每个数位上的数的立方和等于它本身。例如：153=13+53+33，所以153是一个水仙花数。",
+      "codeBlocks": [
+        "n=0\nwhile True:\nnum=int(input(\"请输入三位正整数，-1表示结束：\"))",
+        "num==-1:\nbreak\na=num//100\nb=num%100//10\nc=num%10",
+        "num==a**3+b**3+c**3:\nn+=1\nprint(\"输入的正整数中，水仙花数有{}个\".format(n)) 改进： 代码中缺少对用户输入的有效性检查。 如果用户输入的不是三位正整数或 -1，程 序 可能会出错。代码应该在每次循环结束后重新提示用户输入新的数字， 否则程序只会处理一次输入\nn = 0\nwhile True:\nnum = int(input(\"输入三位正整数，-1表示结束：\"))",
+        "num == -1:\nbreak\nif 100 <= num <= 999:\na = num // 100\nb = num % 100 // 10\nc = num % 10",
+        "num == a**3 + b**3 + c**3:\nn += 1\nelse:"
+      ],
+      "sourcePages": [
+        13
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q33",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 33,
+      "displayId": "Q33",
+      "title": "33、请统计在某个给定范围[m, n]的所有整数中，数字3出现的次数。",
+      "codeBlocks": [
+        "m = int(input(\"请输入范围起始值 m: \"))\nn = int(input(\"请输入范围结束值 n: \"))\ncount = 0\nfor num in range(m, n + 1): # 遍历 [m, n] 的每个数字\nnum_str = str(num) # 将数字转为字符串\ncount += num_str.count('3') # 统计当前数字中3的个数\nprint(\"在 [{}, {}] 范围内，数字3出现的次数是: { }\".format(m,n,count))"
+      ],
+      "sourcePages": [
+        14
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q34",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 34,
+      "displayId": "Q34",
+      "title": "34. 请统计在某个给定范围[m, n]的所有整数中，输出给定范围内的所有素数。",
+      "codeBlocks": [
+        "print(\"请输入有效的三位正整数！\")\nprint(\"水仙花数有{}个\".format(n)) 32:、计算1！+2！+3！+…+10!",
+        "s=0\nfor i in range(1,11):\nt=1\nfor j in range(1,i+1):\nt*=j\ns+=t\nprint(s)"
+      ],
+      "sourcePages": [
+        14
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q35",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 35,
+      "displayId": "Q35",
+      "title": "35、 根据圆半径，计算圆的面积和周长。",
+      "codeBlocks": [
+        "r = 3.2\narea = 3.14*r*r\nperimeter= 2*3.14*r\nprint(\"圆的半径是 ：{:.2f}\".format(r))\nprint(\"圆形的面积:{:.2f},周长:{:.2f}\".format(area,perimeter))"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q36",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 36,
+      "displayId": "Q36",
+      "title": "36、用列表保存一组数据，计算数据的平均值。",
+      "codeBlocks": [
+        "lst=[89,5,-34,23.1]\ntotal=sum(lst)\nnumber=len(lst)\nprint(\"列表lst的平均值是\",total/number)"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q37",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 37,
+      "displayId": "Q37",
+      "title": "37、用列表保存一组成绩数据，统计不及格的人数和最高分。",
+      "codeBlocks": [
+        "scores = [68, 72, 55, 91, 48, 84]\nfail_count = 0\nmax_score = scores[0]\n\nfor score in scores:\n    if score < 60:\n        fail_count += 1\n    if score > max_score:\n        max_score = score\n\nprint(\"不及格人数：\", fail_count)\nprint(\"最高分：\", max_score)"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q38",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 38,
+      "displayId": "Q38",
+      "title": "38、输入三角形的边长和高，计算三角形面积。",
+      "codeBlocks": [
+        "lst=[89,45,-34,23.1,98,33] #notpass为不及格人数，maxscore为最高分\nnotpass =maxscore= 0\nfor item in lst:\nif maxscore<item:\nmaxscore=item\nif item<60:\nnotpass+=1\nprint(\"最高分是{}，不及数人数是{}\".format(maxscore,notpass))",
+        "import math\na=eval(input(\"底边长：\"))\nh=eval(input(\"底边对应的高：\"))\ns = a*h/2\nprint(\"三角形的面积是{:.2f}\".format(s))"
+      ],
+      "sourcePages": [
+        16
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q39",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 39,
+      "displayId": "Q39",
+      "title": "39、 输入一个小数，将其加1.5后输出，输出结果保留2位小数。",
+      "codeBlocks": [
+        "num = float(input(\"请输入一个小数: \"))\nresult = num + 1.5\nprint(\"结果为: {:.2f}\".format(result))"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q40",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 40,
+      "displayId": "Q40",
+      "title": "40、 输入梯形的上底、下底和高，计算并输出其面积。",
+      "codeBlocks": [
+        "top = eval(input(\"请输入上底：\"))\nbottom = eval(input(\"请输入下底：\"))\nheight = eval(input(\"请输入高：\"))\n\narea = (top + bottom) * height / 2\nprint(\"梯形面积为：{:.2f}\".format(area))"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q41",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 41,
+      "displayId": "Q41",
+      "title": "41、定义一个列表， 列表中保存一组数据， 输出这组数据的最大值和最小值。 （需考虑列表是否为空的情况） #",
+      "codeBlocks": [
+        "numbers = [3, 15, 2, 99, 67, 78, 28]\nif numbers: # 检查列表是否非空\nprint(\"最大值:\", max(numbers))\nprint(\"最小值:\", min(numbers))\nelse:\nprint(\"列表为空，无法计算最大值和最小值\") #",
+        "numbers = [3, 15, 2, 99, 67, 78, 28]\nsorted_numbers = sorted(numbers)\nprint(\"最小值:\", sorted_numbers[0])"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q42",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 42,
+      "displayId": "Q42",
+      "title": "42、输入一个数，输出其平方根，输出结果保留两位小数。 （判断输入数据 是否为负数）。",
+      "codeBlocks": [
+        "print(\"最大值:\", sorted_numbers[-1]) #",
+        "numbers = [3, 15, 2, 99, 67, 78, 28]\nmax_num = numbers[0]\nmin_num = numbers[0]\nfor num in numbers:\nif num > max_num:\nmax_num = num\nif num < min_num:\nmin_num = num\nprint(\"最大值:\", max_num)\nprint(\"最小值:\", min_num)",
+        "import math\nnum = float(input(\"请输入一个数字: \"))\nif num < 0:\nprint(\"错误：不能对负数求平方根！\")\nelse:\nsqrt_num = math.sqrt(num)\nprint(\"平方根: {:.2f}\".format(sqrt_num)) $ $"
+      ],
+      "sourcePages": [
+        18
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q43",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 43,
+      "displayId": "Q43",
+      "title": "43、 输入一个名字，如Mary，输出：Hello，输入的名字。如输出：Hello，Mary；如果没有输入姓名要给出必要提示。 #",
+      "codeBlocks": [
+        "name = input(\"请输入您的名字: \").strip() # 去掉首尾空格\nif name:\nprint(\"Hello, \" + name)\nelse:\nprint(\"错误：您没有输入名字！\") #",
+        "name = input(\"请输入您的名字: \").strip()\nif name:\nprint(\"Hello, {}\".format(name))\nelse:\nprint(\"错误：您没有输入名字！\") #",
+        "name = input(\"请输入您的名字: \").strip()\nif name:\nprint(\"Hello,\",name) # 注意：print() 会在逗号后自动加空格"
+      ],
+      "sourcePages": [
+        19
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q44",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 44,
+      "displayId": "Q44",
+      "title": "44、对于半径为r的球，其体积的计算公式为 𝑣=!\"𝜋𝑟\"，这里取π= 3.14。现给定r，求V。",
+      "codeBlocks": [
+        "PI = 3.14\nr = float(input(\"请输入球的半径 r: \"))\nvolume = (4 / 3) * PI * (r ** 3)\nprint(f\"半径为 {r} 的球的体积为: {volume:.2f}\")"
+      ],
+      "sourcePages": [
+        20
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q45",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 45,
+      "displayId": "Q45",
+      "title": "45、你买了一箱n个苹果， 很不幸的是买完时箱子里混进了一条虫子。虫子每x小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个， 那么经过y小时你还有多少个完整的苹果？ 输入n，x和y（均为整数）。输入数据保证y <= n * x。 输出剩下的苹果个数。 $",
+      "codeBlocks": [
+        "else:\nprint(\"错误：您没有输入名字！\")"
+      ],
+      "sourcePages": [
+        20
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q46",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 46,
+      "displayId": "Q46",
+      "title": "46、 输入一个数字1-7，输出对应星期几名称的字符串。如输入3，输出星期三；输入7，输出星期日。 #",
+      "codeBlocks": [
+        "weeks = [\"\", \"星期一\", \"星期二\", \"星期三\", \"星期四\", \"星期五\", \"星期六\", \"星期日\"]\nnum = int(input(\"请输入数字1-7: \"))\nif 1 <= num <= 7:\nprint(weeks[num])\nelse:\nprint(\"错误：请输入1-7之间的数字！\") #",
+        "week_dict = { 1: \"星期一\", 2: \"星期二\", 3: \"星期三\", 4: \"星期四\", 5: \"星期五\", 6: \"星期六\","
+      ],
+      "sourcePages": [
+        21
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week9-Q47",
+      "docId": "week9",
+      "docTitle": "第九周：复习第 1-3 部分",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 47,
+      "displayId": "Q47",
+      "title": "47、 制作一个计算器，实现加减乘除运算，只能输入一行，输入两个操作数和一个操作符（中间以空格分隔），形式如：3 * 5，计算并输出结果。结果形式为：3 * 5 = 15。（",
+      "codeBlocks": [
+        "num = int(input(\"请输入数字1-7: \"))\nprint(week_dict.get(num, \"错误：请输入1-7之间的数字！\"))",
+        "expression = input(\"请输入计算式（如 3 * 5）: \")\nparts = expression.split() # 检查输入格式\nif len(parts) != 3:\nprint(\"错误：请输入正确的格式（如 3 * 5）\")\nelse:\nnum1 = float(parts[0])\noperator = parts[1]\nnum2 = float(parts[2])",
+        "operator == '+':\nresult = num1 + num2",
+        "operator == '-':\nresult = num1 - num2",
+        "operator == '*':\nresult = num1 * num2",
+        "operator == '/':",
+        "num2 == 0:\nprint(\"错误：除数不能为0！\") exit()",
+        "result = num1 / num2\nelse:\nprint(\"错误：不支持的操作符（仅支持 + - * /）\")\nprint(\"{} {} {} = {}\".format(num1, operator, num2, result))"
+      ],
+      "sourcePages": [
+        22,
+        23
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q01",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 1,
+      "displayId": "Q01",
+      "title": "1. 采用字符遍历的方式，遍历输入字符串中的每个字符，将其转换为密文，用”+”连接到处理完毕的密文字符串中。",
+      "codeBlocks": [
+        "s=0\nfor i in range(1,100):\nif i%2!=0: #或者==1\ns+=i\nelse:\ns-=i\nprint(s)",
+        "secret_ch=chr(ord('a')+((ord(ch)-ord('a'))+3)%26) #利用ASCII码计算密文字符"
+      ],
+      "sourcePages": [
+        1,
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q02",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 2,
+      "displayId": "Q02",
+      "title": "2、1。程 序 要 求 输 入 一 个 整 数 ，将 经 过 处 理 得 到1的过程输出来。 最后输出 “完成” 。",
+      "codeBlocks": [
+        "S = 0\nfor i in range(1, 101): # 1到100\nif i % 2 == 1:\nS += 1 / i\nelse:\nS -= 1 / i\nprint(\"计算结果为:\", S)"
+      ],
+      "sourcePages": [
+        1,
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q03",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 3,
+      "displayId": "Q03",
+      "title": "3、输入一个正整数n，计算其阶乘。n！=n*(n-1)*(n-2)*....*2*1",
+      "codeBlocks": [
+        "n = int(input(\"请输入一个正整数 n: \"))\nfactorial = 1\nfor i in range(1, n + 1):\nfactorial *= i\nprint(\"{}! = {}\".format(n, factorial))\ns=1+(1+2)+(1+2+3)+...+(1+2+3+...+n)"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q04",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 4,
+      "displayId": "Q04",
+      "title": "4、",
+      "codeBlocks": [
+        "n = int(input(\"请输入一个正整数 n: \"))\nS = 0\nfor i in range(1, n + 1):\ninner_sum = 0\nfor j in range(1, i + 1): # 内层循环：计算单独项\ninner_sum += j\nS += inner_sum\nprint(\"S =\", S)"
+      ],
+      "sourcePages": [
+        1,
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q05",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 5,
+      "displayId": "Q05",
+      "title": "5、期末考试结束后，教师需要统计班级的成绩情况，输入学生人数，每个学生的考试成绩（100分制） ，输出班级的平均分、不及格人数。 （最高、最低分）",
+      "codeBlocks": [
+        "n = int(input(\"请输入一个正整数 n: \"))\nS = 0\ncurrent_sum = 0\nfor i in range(1, n + 1):\ncurrent_sum += i\nS += current_sum\nprint(\"S =\", S)",
+        "scores = [] # 输入成绩\nwhile True:\nscore_input = input(\"请输入学生成绩（输入-1结束）：\")",
+        "score_input == \"-1\":\nbreak scores.append(float(score_input))\nif len(scores) == 0:\nprint(\"未输入任何成绩！\")\nelse:\ntotal = 0\nfor s in scores:\ntotal += s\naverage = total / len(scores)\nfail_count = 0\nfor s in scores:\nif s < 60:\nfail_count += 1\nmax_score = max(scores)\nmin_score = min(scores)\nprint(\"\\n成绩统计结果：\")\nprint(\"学生人数：{}\".format(len(scores)))\nprint(\"平均分：{:.2f}\".format(average))"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q06",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 6,
+      "displayId": "Q06",
+      "title": "6、",
+      "codeBlocks": [
+        "sn=6+66+666+…+66…66(n个6)。输入一个正整数n，n的范围是[0,10)。输出Sn的值\nn = int(input(\"请输入一个正整数 n (0 ≤ n < 10): \"))\nif n < 0 or n >= 10:\nprint(\"输入错误：n 必须在 [0, 10) 范围内\")\nelse:\nSn = 0\ncurrent_term = 0\nfor i in range(1, n + 1):\ncurrent_term = current_term * 10 + 6\nSn += current_term\nprint(\"Sn =\", Sn)"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q07",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 7,
+      "displayId": "Q07",
+      "title": "7、 输入一个字符串，统计并输出字符串中元音字母的个数(小写元音字母: 'a','e','i','o','u')。",
+      "codeBlocks": [
+        "s = input(\"请输入一个字符串：\")\nvowels = \"aeiouAEIOU\"\ncount = 0\nfor char in s:\nif char in vowels:\ncount += 1\nprint(\"元音字母个数：\", count)"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q08",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 8,
+      "displayId": "Q08",
+      "title": "8、输入一组学生学号（在一行输入，学号之间以英文逗号分隔），统计其中2020级、2021级、2022级学生各多少人。",
+      "codeBlocks": [
+        "print(\"不及格人数：{}\".format(fail_count))\nprint(\"最高分：{}\".format(max_score))\nprint(\"最低分：{}\".format(min_score))",
+        "方法一：\nstudent_ids = input(\"请输入学号（用英文逗号分隔） ：\").split(\",\")\ncount_2020 =\ncount_2021 =\ncount_2022 = 0\nfor sid in student_ids:\nsid = sid.strip() # 去除前后空格\nif len(sid) >= 4: # 确保学号长度足够\nyear = sid[:4] # 取前四位",
+        "year == \"2020\":\ncount_2020 += 1",
+        "year == \"2021\":"
+      ],
+      "sourcePages": [
+        3,
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q09",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 9,
+      "displayId": "Q09",
+      "title": "9、一个数如果恰好等于它的因子之和，这个数就称为“完数” ，例如，6的因子为1，2，3,而6=1+2+3，因此6就是“完数” 。编程找出100内的所有完数。",
+      "codeBlocks": [
+        "for num in range(1,100):\nt=0\ns=\"\"\nfor i in range(1,num//2+1):\nif num%i==0:\nt+=i\ns+=str(i)+\" \"",
+        "t==num:\nprint(\"{}是完数，其因子为：{}\".format(t,s))"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q10",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 10,
+      "displayId": "Q10",
+      "title": "10、使用*号输出金字塔形状。在程序的第i行，每行打印（2i-1）个星号，在这之前输出n-i个空格，n为打印行数。样图如下所示： *",
+      "codeBlocks": [
+        "count_2021 += 1",
+        "year == \"2022\":\ncount_2022 += 1\nprint(\"2020级人数：\", count_2020)\nprint(\"2021级人数：\", count_2021)\nprint(\"2022级人数：\", count_2022)",
+        "student_ids = input(\"请输入学号（用英文逗号分隔）：\").split(\",\") # 初始化字典统计各年级人数\nyear_counts = {\"2020\": 0, \"2021\": 0, \"2022\": 0} # 统计各年级人数\nfor sid in student_ids:\nsid = sid.strip() # 去除前后空格\nif len(sid) >= 4: # 确保学号长度足够\nyear = sid[:4] # 取前四位作为年份\nif year in year_counts: # 只统计2020-2022级 year_counts[year] += 1\nprint(\"2020级人数：{}\".format(year_counts[\"2020\"]))\nprint(\"2021级人数：{}\".format(year_counts[\"2021\"]))\nprint(\"2022级人数：{}\".format(year_counts[\"2022\"]))",
+        "for year, count in year_counts.items():\nprint(\"{}级人数：{}\".format(year, count))"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q11",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 11,
+      "displayId": "Q11",
+      "title": "11、 输出数字金字塔 答案参考教材51页",
+      "codeBlocks": [
+        "n = int(input(\"请输入行数：\"))\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(j, end=\"\")\n    print()"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q12",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 12,
+      "displayId": "Q12",
+      "title": "12、 计算1-100之间偶数的和。",
+      "codeBlocks": [
+        "s = 0\nfor i in range(2, 101, 2):\n    s += i\nprint(\"1-100之间偶数的和为：\", s)"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q13",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 13,
+      "displayId": "Q13",
+      "title": "13、 计算1到100中既能被3又能被5整除的数字的个数。",
+      "codeBlocks": [
+        "count = 0\nfor i in range(1, 101):\n    if i % 3 == 0 and i % 5 == 0:\n        count += 1\nprint(\"个数为：\", count)"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q14",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 14,
+      "displayId": "Q14",
+      "title": "14、 输入n个数，输出其中的最小值。",
+      "codeBlocks": [
+        "n = int(input(\"请输入数据个数：\"))\nmin_num = eval(input(\"请输入第1个数：\"))\n\nfor i in range(2, n + 1):\n    num = eval(input(\"请输入第{}个数：\".format(i)))\n    if num < min_num:\n        min_num = num\n\nprint(\"最小值为：\", min_num)"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q15",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 15,
+      "displayId": "Q15",
+      "title": "15、 输入一个字符串，计算分别其中小写字符、大写字符、数字字符、其他字符的个数。",
+      "codeBlocks": [
+        "s = input(\"请输入字符串：\")\nlower_count = 0\nupper_count = 0\ndigit_count = 0\nother_count = 0\n\nfor ch in s:\n    if ch.islower():\n        lower_count += 1\n    elif ch.isupper():\n        upper_count += 1\n    elif ch.isdigit():\n        digit_count += 1\n    else:\n        other_count += 1\n\nprint(\"小写字母：\", lower_count)\nprint(\"大写字母：\", upper_count)\nprint(\"数字字符：\", digit_count)\nprint(\"其他字符：\", other_count)"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q16",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 16,
+      "displayId": "Q16",
+      "title": "16、 使用while、for循环计算1+2+3+…+100 （若补充输出一共累加了多少个整数，如何调整代码？）",
+      "codeBlocks": [
+        "方法一：\ns=0\ni=1\nwhile i<=100:\ns+=i\ni+=1\nprint(\"1到100的累加和为：\",s)\n方法二：\ntotal = 0\ncount = 0\nfor i in range(1, 101): # 注意range的结束值是101（不包括101）\ntotal += i\ncount += 1\nprint(\"累加和：\", total)\nprint(\"累计整数个数：\", count)\nfor循环和while循环计算s=12-22+32-42+…+972-982+992"
+      ],
+      "sourcePages": [
+        6,
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q17",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 17,
+      "displayId": "Q17",
+      "title": "17、分别使用",
+      "codeBlocks": [
+        "方法一：\ns=0\nflag=1\nfor i in range(1,100):\ns=s+i*i*flag\nflag*=-1\nprint(s)\n方法二：\nS = 0\ni = 1\nsign = 1 # 符号控制：1表示正，-1表示负\nwhile i <= 99:\nS += sign * (i ** 2)\nsign *= -1 # 每次循环翻转符号\ni += 1\nprint(\"S =\", S)"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q18",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 18,
+      "displayId": "Q18",
+      "title": "18、输入一组正整数（输入-1结束） ，计算其中有多少个能被3整除且个位数为6的整数。",
+      "codeBlocks": [
+        "count = 0\nwhile True:\nnum = int(input(\"请输入一个正整数（输入-1结束） ：\"))",
+        "num == -1:\nbreak\nif num > 0 and num % 3 == 0 and num % 10 == 6:\ncount += 1\nprint(\"满足条件的整数个数：\", count)"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q19",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 19,
+      "displayId": "Q19",
+      "title": "19、所谓角谷猜想， 是指对于任意一个正整数， 如果是奇数， 则乘3加1，如 果 是 偶 数 ，则 除 以2，得到的结果再按照上述规则重复处理，最终总能够得到1。如，假定初始整数为5，计算过程分别为",
+      "codeBlocks": [
+        "n = int(input(\"请输入一个正整数：\"))\nwhile n != 1:\n    print(n, end=\" \")\n    if n % 2 == 1:\n        n = n * 3 + 1\n    else:\n        n = n // 2\nprint(1)"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q20",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 20,
+      "displayId": "Q20",
+      "title": "20、 农夫约翰去年赚了m元，他想把这笔钱用于投资，已知投资的复合年利率为r%，请帮他计算n年后他会有多少钱，并输出其整数部分。例如，约翰有10000元，复合年利率为3%，则他第一年结束后有1.03*10000=10300元；第二年结束后有1.03*10300=10609元。",
+      "codeBlocks": [
+        "方法一：\nm = float(input(\"请输入初始金额（元）：\"))\nr = float(input(\"请输入年利率（%）：\")) / 100 # 转换为小数\nn = int(input(\"请输入投资年数：\"))\namount = m #",
+        "for _ in range(n):\namount *= (1 + r)\nprint(\"{}年后的总金额（整数部分）：{}\".format(n, int(amount)))\n方法二：\nimport math\nm = float(input(\"请输入初始金额（元）：\"))\nr = float(input(\"请输入年利率（%）：\")) / 100\nn = int(input(\"请输入投资年数：\"))\namount = m * (1 + r) ** n\nprint(\"{}年后的总金额（整数部分）：{}\".format(n, math.floor(amount)))"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q21",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 21,
+      "displayId": "Q21",
+      "title": "21、输入两个正整数m和n，求其最大公约数和最小公倍数。 （提示参考教材P54）",
+      "codeBlocks": [
+        "m=eval(input(\"请输入正整数m:\"))\nn=eval(input(\"请输入正整数n:\"))\nif m<n:m,n=n,m"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q22",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 22,
+      "displayId": "Q22",
+      "title": "22、统计学生成绩。输入若干成绩值，计算输入成绩的最高、最低和平均分。",
+      "codeBlocks": [
+        "count = 0\ntotal = 0\nmax_score = None\nmin_score = None\n\nwhile True:\n    score = eval(input(\"请输入成绩（负数结束）：\"))\n    if score < 0:\n        break\n    count += 1\n    total += score\n    if max_score is None or score > max_score:\n        max_score = score\n    if min_score is None or score < min_score:\n        min_score = score\n\nif count == 0:\n    print(\"没有输入成绩\")\nelse:\n    print(\"最高分：\", max_score)\n    print(\"最低分：\", min_score)\n    print(\"平均分：{:.2f}\".format(total / count))"
+      ],
+      "sourcePages": [
+        8
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q23",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 23,
+      "displayId": "Q23",
+      "title": "23、有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13......，计算它们的和，直到大于20为止，输出这期间至少需要累加多少个数。",
+      "codeBlocks": [
+        "a = 2\nb = 1\ntotal = 0\ncount = 0\n\nwhile total <= 20:\n    total += a / b\n    count += 1\n    a, b = a + b, a\n\nprint(\"至少需要累加{}个数\".format(count))"
+      ],
+      "sourcePages": [
+        8
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q24",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 24,
+      "displayId": "Q24",
+      "title": "24、 输入一个正整数 （位数不限） ， 将其倒序输出， 如输入78961，输 出16987；输 入8900，输出0098。",
+      "codeBlocks": [
+        "t=m*n\nr=m%n\nwhile r!=0:\nm=n\nn=r\nr=m%n\nprint(\"最大公约数是：{}\".format(n))\nprint(\"最小公倍数是：{}\".format(int(t/n)))"
+      ],
+      "sourcePages": [
+        8
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q25",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 25,
+      "displayId": "Q25",
+      "title": "25、 给定某一字符串s，对其中的每一字符c大小写转换：如果c是大写字母，则将它转换成小写字母；如果c是小写字母，则将它转换成大写字母；如果c不是字母，则不转换。 #",
+      "codeBlocks": [
+        "s=\"abc32TT9ac\"\nt=\"\"\nfor i in range(len(s)):\nif s[i].islower():\nt+=s[i].upper()\nelif s[i].isupper():\nt+=s[i].lower()\nelse:\nt+=s[i]\nprint(t) #",
+        "s=\"abc32TT9ac\"\nt=\"\"\nfor char in s: # 直接遍历字符而非索引\nif char.islower():\nt += char.upper()\nelif char.isupper():\nt += char.lower()\nelse:\nt += char\nprint(t) #",
+        "s=\"abc32TT9ac\"\nt = []\nfor char in s:\nif char.islower(): t.append(char.upper())\nelif char.isupper(): t.append(char.lower())\nelse:"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q26",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 26,
+      "displayId": "Q26",
+      "title": "26、 输入一个整数，将各位数字反转后输出。",
+      "codeBlocks": [
+        "num = int(input(\"请输入一个整数：\"))\ns = str(num)\nif s[0] == '-':\nprint('-' + s[:0:-1]) # 保留负号并反转剩余部分\nelse:\nprint(s[::-1])"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q27",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 27,
+      "displayId": "Q27",
+      "title": "27、 计算12-22+32-42+…+972-982+992。",
+      "codeBlocks": [
+        "s=0\nflag=1\nfor i in range(1,100):\ns=s+i*i*flag\nflag*=-1\nprint(s)"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q28",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 28,
+      "displayId": "Q28",
+      "title": "28、 输入一个浮点数，输出这个浮点数的绝对值（不能使用函数），保留到小数点后两位。",
+      "codeBlocks": [
+        "x=float(input(\"请输入一个浮点数：\"))\nif x<0:\nx=-x\nprint(\"绝对值是：{:.2f}\".format(x))"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q29",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 29,
+      "displayId": "Q29",
+      "title": "29、 输入三个整数，输出其中最大的数。",
+      "codeBlocks": [
+        "print(t)",
+        "a=int(input(\"输入第一个整数：\"))\nb=int(input(\"输入第二个整数：\"))\nc=int(input(\"输入第三个整数：\"))\nmaxnum=a\nif b>maxnum:\nmaxnum=b\nif c>maxnum:\nmaxnum=c\nprint(\"最大值为：{}\".format(maxnum))"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q30",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 30,
+      "displayId": "Q30",
+      "title": "30、 汇率兑换：按照1美元=6人民币的汇率来编写一个美元与人民币的双向兑换程序。输入形式如100$或100R。以$结尾表示美元，将其转换为人民币。以R结尾表示人民币，将其转换为美元。输出结果保留2位小数。",
+      "codeBlocks": [
+        "money = input(\"请输入金额：\").strip()\nvalue = eval(money[:-1])\nunit = money[-1]\n\nif unit == \"$\":\n    result = value * 6\n    print(\"{:.2f}R\".format(result))\nelif unit == \"R\":\n    result = value / 6\n    print(\"{:.2f}$\".format(result))\nelse:\n    print(\"输入格式错误\")"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q31",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 31,
+      "displayId": "Q31",
+      "title": "31、 某移动通信公司的手机话费收费标准规定如下。 若为固定套餐用户， 每月固定费用50元，可打电话300分钟，超出300分钟，每分钟收费0.1元；若非固定套餐用户，每分钟电话费0.2元。输入某人一个月的通话时间，以及是否固定套餐用户（输入y表示固定套餐用户，输入n表示非固定套餐用户），计算话费。",
+      "codeBlocks": [
+        "minutes = int(input(\"请输入通话分钟数：\"))\nis_package = input(\"是否固定套餐用户（y/n）：\").strip().lower()\n\nif is_package == \"y\":\n    fee = 50\n    if minutes > 300:\n        fee += (minutes - 300) * 0.1\nelse:\n    fee = minutes * 0.2\n\nprint(\"话费为：{:.2f}元\".format(fee))"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q32",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 32,
+      "displayId": "Q32",
+      "title": "32、 根据PM2.5的监测值，输出空气质量等级。输入PM2.5数值，根据下表输出相应的空气质量等级。",
+      "codeBlocks": [
+        "pm = eval(input(\"请输入PM2.5数值：\"))\n\nif pm <= 35:\n    level = \"优\"\nelif pm <= 75:\n    level = \"良\"\nelif pm <= 115:\n    level = \"轻度污染\"\nelif pm <= 150:\n    level = \"中度污染\"\nelif pm <= 250:\n    level = \"重度污染\"\nelse:\n    level = \"严重污染\"\n\nprint(\"空气质量等级：\", level)"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q33",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 33,
+      "displayId": "Q33",
+      "title": "33、 输出1-10十个数字。",
+      "codeBlocks": [
+        "for i in range(1, 11):\n    print(i)"
+      ],
+      "sourcePages": [
+        13
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q34",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 34,
+      "displayId": "Q34",
+      "title": "34、 计算1-100的累加和。",
+      "codeBlocks": [
+        "s = 0\nfor i in range(1, 101):\n    s += i\nprint(\"1-100的累加和为：\", s)"
+      ],
+      "sourcePages": [
+        13
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q35",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 35,
+      "displayId": "Q35",
+      "title": "35、 输入k个正整数，其中每个数都是大于等于1，小于等于10的数。编写程序计算输入的k个正整数中，1，5和10分别出现的次数。",
+      "codeBlocks": [
+        "k = int(input(\"请输入正整数的个数 k: \"))\ncount_1 =\ncount_5 =\ncount_10 = 0\nfor i in range(k):\nnum = int(input(f\"请输入第{i+1}个正整数(1-10): \"))",
+        "num == 1:\ncount_1 += 1",
+        "num == 5:\ncount_5 += 1",
+        "num == 10:\ncount_10 += 1\nprint(f\"数字1出现的次数: {count_1}\")\nprint(f\"数字5出现的次数: {count_5}\")\nprint(f\"数字10出现的次数: {count_10}\")"
+      ],
+      "sourcePages": [
+        14
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q36",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 36,
+      "displayId": "Q36",
+      "title": "36、 计算一个班级中所有学生的平均年龄。输入学生人数，以及每个学生的年龄，输出平均年龄（保留两位小数）。 # 输入学生人数",
+      "codeBlocks": [
+        "n = int(input(\"请输入学生人数：\"))\nages = []"
+      ],
+      "sourcePages": [
+        14
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q37",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 37,
+      "displayId": "Q37",
+      "title": "37、 输入班级数， 每个班的人数以及每个学生的成绩， 计算并输出每个班的平均分。 # 输入班级数量",
+      "codeBlocks": [
+        "class_num = int(input(\"请输入班级数量：\")) # 外层循环处理每个班级\nfor class_id in range(1, class_num + 1): # 输入当前班级人数\nstudent_num = int(input(\"请输入第{}个班级的学生人数：\".format(class_id))) # 内层循环控制每个学生的成绩\nscores = []\nfor student_id in range(1, student_num + 1): # 输入每个学生成绩\nscore = float(input(\"请输入第{}个班级第{}个学生的成绩：\".format(class_id, student_id))) scores.append(score) # 计算并输出班级平均分\naverage = sum(scores) / student_num\nprint(\"第{}个班级的平均分为：{:.2f}\".format(class_id, average))"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q38",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 38,
+      "displayId": "Q38",
+      "title": "38、 有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13......，使用while循环实现：（1）编写程序计算这个数列的前20项之和。（2）编写程序，计算这个分数序列的累加和，当累加结果超过35时结束，计算至少需要累加多少项。",
+      "codeBlocks": [
+        "for i in range(n):\nage = int(input(\"请输入第{}个学生的年龄：\".format(i+1))) # 使用format的序号提示 ages.append(age) # 计算并格式化输出平均年龄\naverage = sum(ages) / n\nprint(\"平均年龄为：{:.2f}岁\".format(average)) # 使用format保留2位小数"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q39",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 39,
+      "displayId": "Q39",
+      "title": "39、 监护室每小时测量一次病人的血压，若收缩压在90 - 140之间并且舒张压在60 - 90之间（包含端点值）则称之为正常。现给出某病人若干次测量的血压值，计算病人保持正常血压的最长小时数。 输入测量次数n，依次输入每次测量的收缩压和舒张压。输出血压连续正常的最长小时数。此题可以用for循环实现…",
+      "codeBlocks": [
+        "n = int(input(\"请输入测量次数：\"))\ncurrent_hours = 0\nmax_hours = 0\n\nfor i in range(n):\n    high = int(input(\"请输入收缩压：\"))\n    low = int(input(\"请输入舒张压：\"))\n    if 90 <= high <= 140 and 60 <= low <= 90:\n        current_hours += 1\n        if current_hours > max_hours:\n            max_hours = current_hours\n    else:\n        current_hours = 0\n\nprint(\"最长正常小时数：\", max_hours)"
+      ],
+      "sourcePages": [
+        16
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q40",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 40,
+      "displayId": "Q40",
+      "title": "40、 输出九九乘法表。算式之间用“\\t”作为分隔符。",
+      "codeBlocks": [
+        "for i in range(1, 10):\n    for j in range(1, i + 1):\n        print(\"{}*{}={}\".format(j, i, i * j), end=\"\\t\")\n    print()"
+      ],
+      "sourcePages": [
+        16
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q41",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 41,
+      "displayId": "Q41",
+      "title": "41、 输入一个正数数字序列， 计算序列的最大跨度值， 最大跨度值=最大值－最小值。要求，在一行输入数字，以空格分隔。 # 获取输入并去除首尾空格",
+      "codeBlocks": [
+        "input_str = input(\"请输入数字序列（以空格分隔）：\").strip()\nif not input_str:\nprint(\"错误：输入不能为空\")\nelse:\nnums = []\nfor num_str in input_str.split(): # 检查是否为有效非负数（整数或小数），替换为空字符相当于删除，例1.2.3 # isdigit检查是否为数字：0-9，不包括正负号以及小数点（\nif num_str.replace('.', '', 1).isdigit(): nums.append(float(num_str))\nelse:\nprint(\"错误：'{}' 不是有效数字\".format(num_str))\nbreak\nelse: # 仅当for循环完整执行时执行\nif nums: max_val,\nmin_val = max(nums), min(nums)\nprint(\"最大值：{:.2f}，最小值：{:.2f}，跨度值：{:.2f}\".format( max_val, min_val, max_val - min_val))\nelse: #可能有其他错误情况 例：.123\nprint(\"错误：至少需要输入一个有效数字\")"
+      ],
+      "sourcePages": [
+        16
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q42",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 42,
+      "displayId": "Q42",
+      "title": "42、 高手挑战：用continue解决 恺撒密码问题。凯撒密码是古罗马凯撒大帝用来对军事情报进行加解密的算法，它采用了替换方法对信息中的每一个英文字符循环替换为字母表序列中该字符后面的第三个字符，字母表的对应关系如下： 明文：a b c d e f g h i j k l m n o p q r …",
+      "codeBlocks": [
+        "c=(p+3) mod 26。假设用户可能使用的输入仅包含小写字母a~z和空格，请编写一个程序，对输入字符串进行凯撒密码加密，其中空格不用进行加密处理。"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q43",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 43,
+      "displayId": "Q43",
+      "title": "43、 计算第一个非零数字前0的个数； 若输入的一串数字全部为0，给出提示。",
+      "codeBlocks": [
+        "s = input(\"请输入一串数字：\")\ncount = 0\n\nfor ch in s:\n    if ch == \"0\":\n        count += 1\n    else:\n        break\n\nif count == len(s):\n    print(\"输入的数字全部为0\")\nelse:\n    print(\"第一个非零数字前0的个数为：\", count)"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week10-Q44",
+      "docId": "week10",
+      "docTitle": "第十周：复习第 4-5 部分",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 44,
+      "displayId": "Q44",
+      "title": "44、 计算并打印50以内的质数 （else语句用于二重循环）",
+      "codeBlocks": [
+        "for num in range(2, 51):\n    for i in range(2, num):\n        if num % i == 0:\n            break\n    else:\n        print(num, end=\" \")"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q01",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 1,
+      "displayId": "Q01",
+      "title": "1、 设计一个登录验证程序。输入用户名和密码，如果用户名和密码均正确，输出“登录成功” 并结束程序， 否则输出 “用户名或密码错误” 的提示信息， 有3次输入错误的机会，如果超过3次登录错误，给出提示“3次输入错误，请稍后再试” 。 （循环的else）",
+      "codeBlocks": [
+        "errors=0\nwhile errors<3:\nusername=input(\"请输入用户名：\")\npsw=input(\"请输入密码：\")",
+        "username==\"python\" and\npsw==\"123456\":\nprint(\"登录成功\")\nbreak\nelse:\nerrors+=1\nprint(\"用户名或密码错误\")\nelse:\nprint(\"3次输入错误，请稍后再试\")"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q02",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 2,
+      "displayId": "Q02",
+      "title": "2、用while True结构，编写一个猜年龄的程序。输入猜测的年龄，直到猜对为止，每次给出猜大了或猜小了的提示，猜测成功时输出猜测的次数。 （假定正确的年龄是18）",
+      "codeBlocks": [
+        "correct_age = 18\nguess_count = 0\nwhile True:\nguess = int(input(\"请输入你猜测的年龄：\"))\nguess_count += 1\nif guess < correct_age:\nprint(\"猜小了！\")\nelif guess > correct_age:\nprint(\"猜大了！\")\nelse:\nprint(\"恭喜你猜对了！总共猜测了{}次。\".format(guess_count))\nbreak"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q04",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 4,
+      "displayId": "Q04",
+      "title": "4. 判断一个正整数是不是回文数。 如果一个数的正向和逆向的读法相同， 该数称为回文数，如123",
+      "codeBlocks": [
+        "n = input(\"请输入一个正整数：\")\nif n == n[::-1]:\n    print(\"是回文数\")\nelse:\n    print(\"不是回文数\")"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q21",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 21,
+      "displayId": "Q21",
+      "title": "21、7887是回文数。",
+      "codeBlocks": [
+        "n = float(input(\"请输入小李的年薪（万元） ：\"))\nk = float(input(\"请输入房价年增长率（%）：\")) / 100\nhouse_price = 100\nsavings = 0\nyears = 0\nwhile years <= 20:\nif savings >= house_price:\nprint(\"小李将在{}年后买下房子。\".format(years))\nbreak\nsavings += n\nhouse_price *= (1 + k)\nyears += 1\nelse:\nprint(\"很遗憾，小李买不起！\")",
+        "x=input(\"输入一个正整数：\")，然后采用对应字符比较（第1个和最后1个比较，第2个和倒数第2个比较,….）的方式处理。 （循环的else）\n方法一：\nx = input(\"输入一个正整数：\")\nlength = len(x)\nfor i in range(length//2):\nif x[i] != x[-i-1]:\nprint(\"不是回文数\")\nbreak\nelse:\nprint(\"是回文数\")",
+        "x = input(\"输入一个正整数：\")",
+        "x == x[::-1]:\nresult = \"{}是回文数\".format(x)\nelse:\nresult = \"{}不是回文数\".format(x)\nprint(result)"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q05",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 5,
+      "displayId": "Q05",
+      "title": "5. 输入一组三位正整数，输入-1表示输入结束，输出这组数中水仙花数的个数。水仙花数是这样一种数：它是三位正整数，它每个数位上的数的立方和等于它本身。例如：153=13+53+33，所以153是一个水仙花数。建议用while True结构。",
+      "codeBlocks": [
+        "count = 0\nwhile True:\n    n = int(input(\"请输入三位正整数（-1结束）：\"))\n    if n == -1:\n        break\n    a = n // 100\n    b = n // 10 % 10\n    c = n % 10\n    if 100 <= n <= 999 and a ** 3 + b ** 3 + c ** 3 == n:\n        count += 1\n\nprint(\"水仙花数的个数为：\", count)"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q06",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 6,
+      "displayId": "Q06",
+      "title": "6. 测量血压：护士给病人测量血压，如果连续3次测量的结果均不正常，则提示“病人需要进一步检查” ， 如果3次测量中有1次结果正常，则不再继续测量，提示“血压正常，病人可观察随诊” 。输入每次测量的病人的血压数值，根据上述要求，给出对应的提示。 （循环的else）",
+      "codeBlocks": [
+        "count_abnormal = 0\nfor i in range(1, 4):\nsystolic = int(input(f\"请输入第{i}次测量的收缩压: \"))\ndiastolic = int(input(f\"请输入第{i}次测量的舒张压: \"))\nif 90 <= systolic <= 140 and 60 <= diastolic <= 90:\nprint(\"血压正常，病人可观察随诊\")\nbreak\nelse:\ncount_abnormal += 1\nprint(f\"第{i}次测量结果不正常\")\nelse:",
+        "count_abnormal == 3:\nprint(\"病人需要进一步检查\")"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q07",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 7,
+      "displayId": "Q07",
+      "title": "7. 输出如下图形： * *** ***** ******* *********",
+      "codeBlocks": [
+        "方法一：\nn = 5 # 金字塔的层数\nfor i in range(1, n + 1):\nprint('*' * (2 * i - 1))\n方法二：\nn = 5\nfor i in range(1, 10, 2): # 步长为2，生成1,3,5,7,9\nprint('*' * i)"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q08",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 8,
+      "displayId": "Q08",
+      "title": "8. 打印一个m行n列的字符矩形，输入行数m、列数n、组成矩形的字符c，输出字符矩形。如输入m为4，n为5，字符c为”*”，则输出结果为： ***** ***** ***** *****",
+      "codeBlocks": [
+        "m = int(input(\"行数：\"))\nn = int(input(\"列数：\"))\nc = input(\"字符：\")\nfor i in range(m):\nfor j in range(n):"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week11-Q09",
+      "docId": "week11",
+      "docTitle": "第十一周：复习第 6-7 部分",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 9,
+      "displayId": "Q09",
+      "title": "9. 输出数字金字塔。 外循环控制输出行数； 内循环分为两个： 第一个while循环从变量X开始，递减在同行内输出，直到输出1为止；第二个while循环从初始值2开始，递增在行内输出，直到输出变量X。样图如下所示： 1 212 32123 4321234 543212345 65432123456",
+      "codeBlocks": [
+        "n = int(input(\"请输入行数：\"))\nx = 1\nwhile x <= n:\n    y = x\n    while y >= 1:\n        print(y, end=\"\")\n        y -= 1\n    y = 2\n    while y <= x:\n        print(y, end=\"\")\n        y += 1\n    print()\n    x += 1"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q01",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 1,
+      "displayId": "Q01",
+      "title": "1．输入一组10个整数，存放在列表numbers中，然后通过遍历列表元素的索引，输出列表元素（在一行输出，元素之间以空格分隔） ，并计算列表元素的累加和、平均值。",
+      "codeBlocks": [
+        "numbers = []\nfor i in range(10):\nnum = int(input(\"请输入第 {} 个整数: \".format(i + 1))) numbers.append(num)",
+        "end=\" \")\nfor i in range(len(numbers)):",
+        "end=\" \")",
+        "total = sum(numbers)\naverage = total / len(numbers)\nprint(\"累加和: {}\".format(total))\nprint(\"平均值: {:.2f}\".format(average))"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q02",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 2,
+      "displayId": "Q02",
+      "title": "2、输入一组数字，在一行输入，数字之间以空格分隔： （1）计算这组数字的最小值。",
+      "codeBlocks": [
+        "numStr=input(\"请输入数字序列，数字之间以空格分隔：\")\nnumbers=numStr.split()\nmax_num=eval(numbers[0])\nfor item in numbers:\nx=eval(item)\nif x>max_num:\nmax_num=x\nprint(\"这组数字的最大值为{}\".format(max_num)) （3）计算这组数字的平均值？"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q03",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 3,
+      "displayId": "Q03",
+      "title": "3、利用简单选择排序的方法，将一个列表中的10个数按从小到大的顺序排列。 （",
+      "codeBlocks": [
+        "input_str = input(\"请输入一组数字，用空格分隔：\")\nnum_strs = input_str.split()\nnums = []\nfor num_str in num_strs: nums.append(float(num_str))\naverage = sum(nums) / len(nums)\nprint(\"平均值:\", average) （4）计算这组数字的方差？(方差是各个数据分别与其平均数之差的平方的和的平均数。)\nsq=0\nfor num in nums:\nsq+=(num-average)**2\nvariance=sq/len(nums)\nprint(“variance is :”,variance) （5）输出其中第几个数最大以及最大值是多少？\ninput_str = input(\"请输入一组数字，用空格分隔：\")\nnum_strs = input_str.split()\nnums = []\nfor s in num_strs: nums.append(float(s))\nif not nums:\nprint(\"没有输入数字！\")\nelse:\nmax_val = max(nums)\nmax_index = nums.index(max_val) + 1 # 位置（从1开始）\nprint(\"第 {} 个数最大，最大值是 {}\".format(max_index, max_val))",
+        "N=10\nnumbers=[]\nfor i in range(N): numbers.append(eval(input(\"请输入一个数字：\")))\nprint(numbers)\nfor i in range(N-1):\nmin=i\nfor j in range(i+1,N):\nif numbers[j]<numbers[min]:\nmin=j #让 numbers[i] 变成当前未排序部分的最小值，同时把原来的 numbers[i] 放到 numbers[min] 的位置"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q04",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 4,
+      "displayId": "Q04",
+      "title": "4、给定一个有10个整数的列表，输出其中的最大值以及最大值在列表中的索引。",
+      "codeBlocks": [
+        "ls = [15, 24.2, -3, 78.1, 19, -45, 1, 22.2, -36.5, 34]\nfor i in range(len(ls)):",
+        "i == 0: # 如果是第一个数\nmax = ls[i] # 将第一个数保存为最大数max\nmax_id = i # 记录该数索引，即数字在列表中的序号\nelif ls[i] > max:\nmax = ls[i]\nmax_id = i\nprint(f\"最大值是{max:.1f}，其在列表中的索引是：{max_id}\")\na=[[1,2,3],[4,5,6],[7,8,9]]）， 输 出 矩 阵 元 素 ， 并 输 出矩阵的主对角线（从左上角到右下角）的元素之和。矩阵的输出形式如下： 1 2 3 4 5 6 7 8 9 主对角线元素和为1+5+9=15 （1）"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q05",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 5,
+      "displayId": "Q05",
+      "title": "5、给定三个3×3矩阵， 存储在列表a中（",
+      "codeBlocks": [
+        "a=[[1,2,3],[4,5,6],[7,8,9]]\ns=0\nprint(\"输出矩阵\")\nfor i in range(3):\nfor j in range(3):\nprint(a[i][j],end=\"\\t\")",
+        "for i in range(3):\ns+=a[i][i]\nprint(\"矩阵对角线元素和为：%d\"%s) （2）\na=[6,2,3]和b=[8,5,6]，计 算 其 对 应 元 素 的 乘 积（6*",
+        "a = [6, 2, 3]\nb = [8, 5, 6]\nc = []\nfor i in range(len(a)): c.append(a[i] * b[i])",
+        "c =\", c)"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q08",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 8,
+      "displayId": "Q08",
+      "title": "8、输入一组学生的学号和成绩，以学号为key，以成绩为value，存放在字典中（每输入一个学生信息，提示是否继续输入（y/n），y为继续输入，n为结束输入） ，按学号升序输出，",
+      "codeBlocks": [
+        "print(numbers)"
+      ],
+      "sourcePages": [
+        3,
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q06",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 6,
+      "displayId": "Q06",
+      "title": "6、学校要选取一部分同学参与一项问卷调查，通过生成n个1-1000之间没有重复的随机整数的方式随机抽取学生， 每个随机整数对应不同的学生学号， 请编写程序， 输入参与调查的学生人数，按从大到小的顺序输出生成的学生学号。 （",
+      "codeBlocks": [
+        "import random\nn=int(input(\"请输入参与调查的学生人数：\"))\nstuNumbers=[] #定义一个空列表，用于存储生成的学号\ni=1\nwhile i<=n:\nx=random.randint(1,1000) #生成一个1到1000之间的额随机整数\nif x not in stuNumbers: #如果生成的随机整数不在学号列表中 stuNumbers.append(x) #将随机数添加到学号列表中\ni+=1 stuNumbers.sort(reverse=True) #对学号列表降序排序\nprint(stuNumbers)"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q07",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 7,
+      "displayId": "Q07",
+      "title": "7、建立字典 dict，包含内容是：\"数学\":\"L04\",\"语文\":\"W01\",\"英语\":\"W02\",\"物理\":\"L02\",\"地理\":\"Q03\"。完成下列操作： （1）向字典中添加键值对\"化学\":\"L03\"。 （2）修改\"数学\"对应的值为\"L01\"。 （3）删除\"地理\"对应的键值对。 （4）按如下格…",
+      "codeBlocks": [
+        "dict={\"数学\":\"L04\",\"语文\":\"W01\",\"英语\":\"W02\",\"物理\":\"L02\",\"地理\":\"Q03\"} dict[\"化学\"]=\"L03\" dict[\"数学\"]=\"L01\"\ndel dict[\"地理\"]\nfor subject,num in dict.items():\nprint(\"{}:{}\".format(num,subject)) #字典遍历的另一种方法\nfor key in dict.keys():\nprint(\"{}:{}\".format(dict[key],key))"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q09",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 9,
+      "displayId": "Q09",
+      "title": "9. 在列表中给出若干字符串，计算并输入最长的字符串。",
+      "codeBlocks": [
+        "lst=['hi',\"program\",'school','for','''chinese''']\nlst1=[]\nfor item in lst: lst1.append(len(item))\np=max(lst1)\nfor item in lst:\nif len(item)==p:\nprint(item,end=\" \") 10.编写程序，随机生成由英文字符和数字组成的4位验证码。 （",
+        "import random\nletters1=\"ABCDEFGHIJKLMN\"\nletters2=\"opqrstuvwxyz\"\nletters3=\"0123456789\"\nletters=letters1+letters2+letters3\ncode=\"\"\nfor i in range(4):\ncode+=random.choice(letters)\nprint(\"产生的验证码是：{}\".format(code))"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q11",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 11,
+      "displayId": "Q11",
+      "title": "11. 用字典描述学生信息，包括no(学号)，name(姓名),score(成绩)等。使用列表存储学生信息的，并根据给定学生姓名，查找学生的信息。 #典型方法",
+      "codeBlocks": [
+        "d={}\nwhile True:\nnum=input(\"请输入学号：\")\nscore=int(input(\"请输入成绩：\")) d[num]=score\nf=input(\"继续输入吗(y:继续输入；n:输入结束):\")",
+        "f=='n':\nbreak\nfor num in sorted(d.keys()):\nprint(num,d[num])",
+        "stu1={\"no\":101,\"name\":\"Rose\",\"address\":\"Changjianroad\",\"score\":92} #使用dict()函数，关键字参数\nstu2=dict(id=201,name=\"Mike\",address=\"Huangheroad\",score=83) #使用dict()函数，键值对序列\nstu3=dict([('id',103),('name','Kate'),('address','Xinanroad'),('pcode','116033'),('score',90)])"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q12",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 12,
+      "displayId": "Q12",
+      "title": "12. 计算斐波那契数列的前20项，并保存在一个列表中，输出列表。 （斐波那契数列（Fibonacci sequence）的前两项为 0 和 1，从第三项开始，每一项是前两项之和） # 初始化斐波那契数列的前两项",
+      "codeBlocks": [
+        "fibonacci = [0, 1] # 计算第2项到第19项（共20项）\nfor i in range(2, 20):\nnext_num = fibonacci[i-1] + fibonacci[i-2] fibonacci.append(next_num)\nprint(\"斐波那契数列前20项:\")\nprint(fibonacci)\nls=[10,20,30,40,50]，转 置 后ls应为[50,40,30,20,10]。注 意不可以引入新列表，通过对应位置的元素交换的方式实现。\nls = []\nwhile True:\nnum = input(\"请输入一个数字：\") ls.append(float(num))\nchoice = input(\"是否继续输入？(y/n): \").strip().lower()\nif choice != 'y':\nbreak\nprint(\"原始列表:\", ls)\nleft = 0\nright = len(ls) - 1\nwhile left < right: ls[left], ls[right] = ls[right], ls[left]\nleft += 1\nright -= 1\nprint(\"反转后列表:\", ls)"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q13",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 13,
+      "displayId": "Q13",
+      "title": "13. 输入一组数据保存在列表中， 要求， 每输入一个数据之后要有是否继续输入的提示 （y或n）， 根 据 用 户 选 择 继 续 输 入 或 结 束 输 入 。 不 使 用reverse()方法， 将列表中的元素转置后输出列表。 如原列表为",
+      "codeBlocks": [
+        "lst=[stu1,stu2,stu3]\nvar=input(\"请输入要查找学生的姓名：\")\nresult=False\nfor item in lst:\nif var.strip() in item.values():\nprint(item)\nresult=True",
+        "result==False:\nprint(\"信息不存在\")"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q14",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 14,
+      "displayId": "Q14",
+      "title": "14. 某公司为员工发放奖品，以随机抽取的方式生成每个员工获得的奖品数量。字典d保存员工姓名与获得奖品数量的键值对，奖品数量的初值均为0。字典d初始形式为：",
+      "codeBlocks": [
+        "d={\"Mary\":0,\"Tom\":0,\"Jason\":0,\"Allen\":0,\"Martin\":0,\"Rose\":0} 要求： （1）请为每个员工生成1-10之间随机数作为奖品数量，填入字典d （2）计算奖品总数 （3）按员工姓名的字母顺序升序排序，输出字典元素，输出形式为：姓名-奖品数\nimport random\nd = {\"Mary\":0, \"Tom\":0, \"Jason\":0, \"Allen\":0, \"Martin\":0, \"Rose\":0} # 为每个员工随机分配奖品数量（1-10）\nfor name in d: d[name] = random.randint(1, 10) # 计算奖品总数\ntotal = sum(d.values())\nprint(\"奖品总数: {}\".format(total)) # 按姓名升序输出\nprint(\"员工获奖情况（按姓名排序）:\")\nfor name, prize in sorted(d.items()):\nprint(\"{}-{}\".format(name, prize))"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q15",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 15,
+      "displayId": "Q15",
+      "title": "15. 给定字典d，其中记录了三位同学期末考试四门课程的成绩：",
+      "codeBlocks": [
+        "d={\"Mary\":[70,90,80,50],\"Tom\":[50,40,60,70],\"Bob\":[70,90,80,10]} 编写程序， 计算字典中每位同学期末考试的总成绩， 将姓名和总成绩作为键值对， 存入字典new中，输出字典new。字典new的输出结果应为：{\"Mary\":290,\"Tom\":220,\"Bob\":250}",
+        "d = {\"Mary\": [70, 90, 80, 50], \"Tom\": [50, 40, 60, 70], \"Bob\": [70, 90, 80, 10]} # 计算总成绩\nnew = {}\nfor name, scores in d.items(): new[name] = sum(scores) # 输出结果\nprint(new)"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q16",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 16,
+      "displayId": "Q16",
+      "title": "16. 统计英文句子中的单词出现的次数。",
+      "codeBlocks": [
+        "sentence = input(\"请输入英文句子：\")\nwords = sentence.lower().split()\ncounts = {}\n\nfor word in words:\n    word = word.strip(\".,!?;:\")\n    if word:\n        counts[word] = counts.get(word, 0) + 1\n\nfor word, count in counts.items():\n    print(word, count)"
+      ],
+      "sourcePages": [
+        8
+      ],
+      "hasCode": true
+    },
+    {
+      "questionId": "week12-Q17",
+      "docId": "week12",
+      "docTitle": "第十二周：复习第 8-9 部分",
+      "pdfFile": "python.pdf",
+      "number": 17,
+      "displayId": "Q17",
+      "title": "17. 二分查找。（具体教材P69）",
+      "codeBlocks": [
+        "方法一：\nsorted_list = [2, 5, 66, 82, 90]\nprint(\"原列表:\", sorted_list)\nnum = int(input(\"请输入要插入的数字: \"))",
+        "insert_index = 0\nfor i in range(len(sorted_list)):\nif num > sorted_list[i]:\ninsert_index = i + 1\nelse:\nbreak sorted_list.insert(insert_index, num)\nprint(\"插入后列表:\", sorted_list)",
+        "sorted_list = [2, 5, 66, 82, 90]\nprint(\"原列表:\", sorted_list)\nnum = int(input(\"请输入要插入的数字: \")) sorted_list.append(num) sorted_list.sort()\nprint(\"插入后列表:\", sorted_list) 20.利用for循环，直接遍历列表的每个元素，类似于字符串遍历。给定列表，依次输出列表元素。"
+      ],
+      "sourcePages": [
+        8,
+        9,
+        10
+      ],
+      "hasCode": true
+    }
+  ]
+}

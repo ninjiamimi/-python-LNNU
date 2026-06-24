@@ -1,0 +1,266 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "build_review_page.py MANUAL_CODE_BLOCKS",
+  "entries": [
+    {
+      "questionId": "week10-Q11",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 11,
+      "displayId": "Q11",
+      "codeBlocks": [
+        "n = int(input(\"请输入行数：\"))\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(j, end=\"\")\n    print()"
+      ]
+    },
+    {
+      "questionId": "week10-Q12",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 12,
+      "displayId": "Q12",
+      "codeBlocks": [
+        "s = 0\nfor i in range(2, 101, 2):\n    s += i\nprint(\"1-100之间偶数的和为：\", s)"
+      ]
+    },
+    {
+      "questionId": "week10-Q13",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 13,
+      "displayId": "Q13",
+      "codeBlocks": [
+        "count = 0\nfor i in range(1, 101):\n    if i % 3 == 0 and i % 5 == 0:\n        count += 1\nprint(\"个数为：\", count)"
+      ]
+    },
+    {
+      "questionId": "week10-Q14",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 14,
+      "displayId": "Q14",
+      "codeBlocks": [
+        "n = int(input(\"请输入数据个数：\"))\nmin_num = eval(input(\"请输入第1个数：\"))\n\nfor i in range(2, n + 1):\n    num = eval(input(\"请输入第{}个数：\".format(i)))\n    if num < min_num:\n        min_num = num\n\nprint(\"最小值为：\", min_num)"
+      ]
+    },
+    {
+      "questionId": "week10-Q15",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 15,
+      "displayId": "Q15",
+      "codeBlocks": [
+        "s = input(\"请输入字符串：\")\nlower_count = 0\nupper_count = 0\ndigit_count = 0\nother_count = 0\n\nfor ch in s:\n    if ch.islower():\n        lower_count += 1\n    elif ch.isupper():\n        upper_count += 1\n    elif ch.isdigit():\n        digit_count += 1\n    else:\n        other_count += 1\n\nprint(\"小写字母：\", lower_count)\nprint(\"大写字母：\", upper_count)\nprint(\"数字字符：\", digit_count)\nprint(\"其他字符：\", other_count)"
+      ]
+    },
+    {
+      "questionId": "week10-Q19",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 19,
+      "displayId": "Q19",
+      "codeBlocks": [
+        "n = int(input(\"请输入一个正整数：\"))\nwhile n != 1:\n    print(n, end=\" \")\n    if n % 2 == 1:\n        n = n * 3 + 1\n    else:\n        n = n // 2\nprint(1)"
+      ]
+    },
+    {
+      "questionId": "week10-Q22",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 22,
+      "displayId": "Q22",
+      "codeBlocks": [
+        "count = 0\ntotal = 0\nmax_score = None\nmin_score = None\n\nwhile True:\n    score = eval(input(\"请输入成绩（负数结束）：\"))\n    if score < 0:\n        break\n    count += 1\n    total += score\n    if max_score is None or score > max_score:\n        max_score = score\n    if min_score is None or score < min_score:\n        min_score = score\n\nif count == 0:\n    print(\"没有输入成绩\")\nelse:\n    print(\"最高分：\", max_score)\n    print(\"最低分：\", min_score)\n    print(\"平均分：{:.2f}\".format(total / count))"
+      ]
+    },
+    {
+      "questionId": "week10-Q23",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 23,
+      "displayId": "Q23",
+      "codeBlocks": [
+        "a = 2\nb = 1\ntotal = 0\ncount = 0\n\nwhile total <= 20:\n    total += a / b\n    count += 1\n    a, b = a + b, a\n\nprint(\"至少需要累加{}个数\".format(count))"
+      ]
+    },
+    {
+      "questionId": "week10-Q30",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 30,
+      "displayId": "Q30",
+      "codeBlocks": [
+        "money = input(\"请输入金额：\").strip()\nvalue = eval(money[:-1])\nunit = money[-1]\n\nif unit == \"$\":\n    result = value * 6\n    print(\"{:.2f}R\".format(result))\nelif unit == \"R\":\n    result = value / 6\n    print(\"{:.2f}$\".format(result))\nelse:\n    print(\"输入格式错误\")"
+      ]
+    },
+    {
+      "questionId": "week10-Q31",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 31,
+      "displayId": "Q31",
+      "codeBlocks": [
+        "minutes = int(input(\"请输入通话分钟数：\"))\nis_package = input(\"是否固定套餐用户（y/n）：\").strip().lower()\n\nif is_package == \"y\":\n    fee = 50\n    if minutes > 300:\n        fee += (minutes - 300) * 0.1\nelse:\n    fee = minutes * 0.2\n\nprint(\"话费为：{:.2f}元\".format(fee))"
+      ]
+    },
+    {
+      "questionId": "week10-Q32",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 32,
+      "displayId": "Q32",
+      "codeBlocks": [
+        "pm = eval(input(\"请输入PM2.5数值：\"))\n\nif pm <= 35:\n    level = \"优\"\nelif pm <= 75:\n    level = \"良\"\nelif pm <= 115:\n    level = \"轻度污染\"\nelif pm <= 150:\n    level = \"中度污染\"\nelif pm <= 250:\n    level = \"重度污染\"\nelse:\n    level = \"严重污染\"\n\nprint(\"空气质量等级：\", level)"
+      ]
+    },
+    {
+      "questionId": "week10-Q33",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 33,
+      "displayId": "Q33",
+      "codeBlocks": [
+        "for i in range(1, 11):\n    print(i)"
+      ]
+    },
+    {
+      "questionId": "week10-Q34",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 34,
+      "displayId": "Q34",
+      "codeBlocks": [
+        "s = 0\nfor i in range(1, 101):\n    s += i\nprint(\"1-100的累加和为：\", s)"
+      ]
+    },
+    {
+      "questionId": "week10-Q39",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 39,
+      "displayId": "Q39",
+      "codeBlocks": [
+        "n = int(input(\"请输入测量次数：\"))\ncurrent_hours = 0\nmax_hours = 0\n\nfor i in range(n):\n    high = int(input(\"请输入收缩压：\"))\n    low = int(input(\"请输入舒张压：\"))\n    if 90 <= high <= 140 and 60 <= low <= 90:\n        current_hours += 1\n        if current_hours > max_hours:\n            max_hours = current_hours\n    else:\n        current_hours = 0\n\nprint(\"最长正常小时数：\", max_hours)"
+      ]
+    },
+    {
+      "questionId": "week10-Q40",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 40,
+      "displayId": "Q40",
+      "codeBlocks": [
+        "for i in range(1, 10):\n    for j in range(1, i + 1):\n        print(\"{}*{}={}\".format(j, i, i * j), end=\"\\t\")\n    print()"
+      ]
+    },
+    {
+      "questionId": "week10-Q43",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 43,
+      "displayId": "Q43",
+      "codeBlocks": [
+        "s = input(\"请输入一串数字：\")\ncount = 0\n\nfor ch in s:\n    if ch == \"0\":\n        count += 1\n    else:\n        break\n\nif count == len(s):\n    print(\"输入的数字全部为0\")\nelse:\n    print(\"第一个非零数字前0的个数为：\", count)"
+      ]
+    },
+    {
+      "questionId": "week10-Q44",
+      "docId": "week10",
+      "pdfFile": "56da02b3ee723a50851c58b0459a1e84(1).pdf",
+      "number": 44,
+      "displayId": "Q44",
+      "codeBlocks": [
+        "for num in range(2, 51):\n    for i in range(2, num):\n        if num % i == 0:\n            break\n    else:\n        print(num, end=\" \")"
+      ]
+    },
+    {
+      "questionId": "week11-Q04",
+      "docId": "week11",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 4,
+      "displayId": "Q04",
+      "codeBlocks": [
+        "n = input(\"请输入一个正整数：\")\nif n == n[::-1]:\n    print(\"是回文数\")\nelse:\n    print(\"不是回文数\")"
+      ]
+    },
+    {
+      "questionId": "week11-Q05",
+      "docId": "week11",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 5,
+      "displayId": "Q05",
+      "codeBlocks": [
+        "count = 0\nwhile True:\n    n = int(input(\"请输入三位正整数（-1结束）：\"))\n    if n == -1:\n        break\n    a = n // 100\n    b = n // 10 % 10\n    c = n % 10\n    if 100 <= n <= 999 and a ** 3 + b ** 3 + c ** 3 == n:\n        count += 1\n\nprint(\"水仙花数的个数为：\", count)"
+      ]
+    },
+    {
+      "questionId": "week11-Q09",
+      "docId": "week11",
+      "pdfFile": "3459e737b2ff0e9b096faaa9bcb445fd(1).pdf",
+      "number": 9,
+      "displayId": "Q09",
+      "codeBlocks": [
+        "n = int(input(\"请输入行数：\"))\nx = 1\nwhile x <= n:\n    y = x\n    while y >= 1:\n        print(y, end=\"\")\n        y -= 1\n    y = 2\n    while y <= x:\n        print(y, end=\"\")\n        y += 1\n    print()\n    x += 1"
+      ]
+    },
+    {
+      "questionId": "week12-Q16",
+      "docId": "week12",
+      "pdfFile": "python.pdf",
+      "number": 16,
+      "displayId": "Q16",
+      "codeBlocks": [
+        "sentence = input(\"请输入英文句子：\")\nwords = sentence.lower().split()\ncounts = {}\n\nfor word in words:\n    word = word.strip(\".,!?;:\")\n    if word:\n        counts[word] = counts.get(word, 0) + 1\n\nfor word, count in counts.items():\n    print(word, count)"
+      ]
+    },
+    {
+      "questionId": "week9-Q08",
+      "docId": "week9",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 8,
+      "displayId": "Q08",
+      "codeBlocks": [
+        "x = eval(input(\"被除数：\"))\ny = eval(input(\"除数：\"))\nif y != 0:\n    print(x / y)\nelse:\n    print(\"除数不能为零\")"
+      ]
+    },
+    {
+      "questionId": "week9-Q11",
+      "docId": "week9",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 11,
+      "displayId": "Q11",
+      "codeBlocks": [
+        "correct_username = \"user\"\nusername = input(\"请输入用户名：\").strip()\nif username.lower() == correct_username:\n    print(\"登录成功！\")\nelse:\n    print(\"用户名错误，请重试。\")"
+      ]
+    },
+    {
+      "questionId": "week9-Q21",
+      "docId": "week9",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 21,
+      "displayId": "Q21",
+      "codeBlocks": [
+        "import math\n\nweight = int(input(\"请输入重量（克）：\"))\nurgent = input(\"是否加急（y/n）：\").strip().lower()\n\nfee = 8\nif weight > 1000:\n    extra_weight = weight - 1000\n    fee += math.ceil(extra_weight / 500) * 4\n\nif urgent == \"y\":\n    fee += 5\n\nprint(\"邮费为{}元\".format(fee))"
+      ]
+    },
+    {
+      "questionId": "week9-Q37",
+      "docId": "week9",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 37,
+      "displayId": "Q37",
+      "codeBlocks": [
+        "scores = [68, 72, 55, 91, 48, 84]\nfail_count = 0\nmax_score = scores[0]\n\nfor score in scores:\n    if score < 60:\n        fail_count += 1\n    if score > max_score:\n        max_score = score\n\nprint(\"不及格人数：\", fail_count)\nprint(\"最高分：\", max_score)"
+      ]
+    },
+    {
+      "questionId": "week9-Q40",
+      "docId": "week9",
+      "pdfFile": "0fffcad7398027bbcb2596207e4aca56(1).pdf",
+      "number": 40,
+      "displayId": "Q40",
+      "codeBlocks": [
+        "top = eval(input(\"请输入上底：\"))\nbottom = eval(input(\"请输入下底：\"))\nheight = eval(input(\"请输入高：\"))\n\narea = (top + bottom) * height / 2\nprint(\"梯形面积为：{:.2f}\".format(area))"
+      ]
+    }
+  ]
+}

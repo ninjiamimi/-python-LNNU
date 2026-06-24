@@ -1,0 +1,327 @@
+{
+  "moduleId": "python-basics-pass-flow-v1",
+  "title": "Python 开始学吧：基础语法 + 条件语句流程控制",
+  "subtitle": "面向零基础、期末入门通关、先看懂再能写。",
+  "targetLevel": "入门通关",
+  "displayMode": "cards-with-code-blocks",
+  "sourceNotes": [
+    "参考菜鸟教程 Python3 基础语法：缩进、代码组、print、input、字符串等基础结构。",
+    "参考菜鸟教程 Python3 条件控制：if / elif / else、比较运算符、嵌套 if、match...case。",
+    "参考菜鸟教程 Python3 循环语句：while、for、range、break、continue、pass。",
+    "本资料为复习摘要与重写示例，不是原文搬运。"
+  ],
+  "examStrategy": [
+    "先抓 4 个骨架：输入 input、类型转换 int/float、判断 if、循环 for/while。",
+    "考试里最常见的是：读懂题意 → 写变量 → 写条件 → 输出结果。",
+    "看到冒号 :，下一行大概率要缩进。缩进错，代码直接塌房。",
+    "零基础先背模板，不要一上来追求花活。"
+  ],
+  "sections": [
+    {
+      "id": "B01",
+      "group": "基础语法",
+      "title": "程序从上往下执行",
+      "level": "入门",
+      "goal": "知道 Python 一行一行执行，先写输入，再写计算，再写输出。",
+      "summary": "Python 默认按从上到下的顺序执行，流程控制语句会改变这条路线。",
+      "points": [
+        "一行通常是一条语句。",
+        "print() 用来输出。",
+        "input() 用来接收键盘输入，拿到的默认是字符串。",
+        "计算前要想清楚变量代表什么。"
+      ],
+      "code": "name = input(\"请输入姓名：\")\nprint(\"你好\", name)\n\nx = 3\ny = 4\nprint(x + y)",
+      "output": "输入姓名后输出问候；最后输出 7。",
+      "examTip": "题目问‘输入一个数并输出结果’，基本套路就是 input → int/float → 计算 → print。",
+      "miniTask": "输入一个人的年龄，然后输出：你的年龄是 xx。"
+    },
+    {
+      "id": "B02",
+      "group": "基础语法",
+      "title": "变量：给数据贴标签",
+      "level": "入门",
+      "goal": "会写变量赋值，知道变量名和字符串不是一回事。",
+      "summary": "变量是数据的名字，不需要提前声明类型，直接赋值即可。",
+      "points": [
+        "= 是赋值，不是数学里的等于判断。",
+        "变量名区分大小写：score 和 Score 不同。",
+        "不要用数字开头命名变量。",
+        "字符串要加引号，变量名不加引号。"
+      ],
+      "code": "score = 85\nname = \"秋\"\nprint(score)\nprint(name)\n\nscore = score + 5\nprint(score)",
+      "output": "先输出 85 和 秋，然后输出 90。",
+      "examTip": "看到 a = a + 1，不是方程，是把 a 原来的值加 1 后再存回 a。",
+      "miniTask": "写一个变量 money = 100，再让 money 增加 20 并输出。"
+    },
+    {
+      "id": "B03",
+      "group": "基础语法",
+      "title": "输入与类型转换",
+      "level": "重点",
+      "goal": "理解 input() 读进来的是字符串，做数学必须转成数字。",
+      "summary": "input() 得到的是 str，参与加减乘除前常用 int() 或 float() 转换。",
+      "points": [
+        "int() 转整数。",
+        "float() 转小数。",
+        "两个字符串相加是拼接，不是数学加法。",
+        "考试常见报错：忘记 int(input())。"
+      ],
+      "code": "a = int(input(\"请输入第一个整数：\"))\nb = int(input(\"请输入第二个整数：\"))\nprint(a + b)\n\nheight = float(input(\"请输入身高：\"))\nprint(height)",
+      "output": "输入 3 和 5，输出 8。",
+      "examTip": "只要题目说‘输入一个整数’，优先写 int(input())；说‘输入小数’，写 float(input())。",
+      "miniTask": "输入圆的半径 r，输出面积 3.14*r*r。"
+    },
+    {
+      "id": "B04",
+      "group": "基础语法",
+      "title": "缩进、冒号与代码块",
+      "level": "重点",
+      "goal": "看懂 if/while/for 后面为什么要冒号和缩进。",
+      "summary": "Python 用缩进表示代码属于谁。冒号后面的缩进区域就是该结构控制的代码块。",
+      "points": [
+        "if、while、for 后面通常有冒号 :。",
+        "冒号下一行要缩进。",
+        "同一个代码块缩进必须一致。",
+        "缩进错会出现 IndentationError。"
+      ],
+      "code": "x = 10\nif x > 5:\n    print(\"x 大于 5\")\n    print(\"这行也属于 if\")\nprint(\"这行不属于 if\")",
+      "output": "因为 x > 5 成立，前两个 print 执行；最后一行无论如何都会执行。",
+      "examTip": "判断一行代码是否被 if 控制，看它有没有缩进到 if 下面。",
+      "miniTask": "写一个 if，判断 score >= 60 时输出 pass。"
+    },
+    {
+      "id": "C01",
+      "group": "条件语句",
+      "title": "if 单分支：满足才执行",
+      "level": "重点",
+      "goal": "会写最简单的条件判断。",
+      "summary": "if 后面的条件为 True，缩进代码块才执行；否则跳过。",
+      "points": [
+        "格式：if 条件:",
+        "条件一般由比较运算组成。",
+        "比较结果只有 True 或 False。",
+        "常见比较：>、<、>=、<=、==、!=。"
+      ],
+      "code": "age = int(input(\"请输入年龄：\"))\nif age >= 18:\n    print(\"可以进入\")\nprint(\"程序结束\")",
+      "output": "年龄大于等于 18 时输出“可以进入”；程序结束一定输出。",
+      "examTip": "== 才是判断相等，= 是赋值。这个坑很小，但能把分数咬走一口。",
+      "miniTask": "输入温度 t，如果 t > 30，输出 hot。"
+    },
+    {
+      "id": "C02",
+      "group": "条件语句",
+      "title": "if else 双分支：二选一",
+      "level": "重点",
+      "goal": "会处理‘否则’情况。",
+      "summary": "if 条件成立走 if，不成立走 else，二者必选其一。",
+      "points": [
+        "else 后面不写条件。",
+        "else 也要冒号。",
+        "if 和 else 缩进要对齐。",
+        "适合判断达标/未达标、奇数/偶数。"
+      ],
+      "code": "score = int(input(\"请输入成绩：\"))\nif score >= 60:\n    print(\"达标\")\nelse:\n    print(\"未达标\")",
+      "output": "输入 75 输出达标；输入 50 输出未达标。",
+      "examTip": "看到‘否则’两个字，就该想到 else。",
+      "miniTask": "输入整数 n，判断它是正数还是非正数。"
+    },
+    {
+      "id": "C03",
+      "group": "条件语句",
+      "title": "if elif else 多分支",
+      "level": "重点",
+      "goal": "会处理多个范围判断，比如成绩等级。",
+      "summary": "elif 用来接多个条件，程序会从上到下判断，命中一个后就不再继续。",
+      "points": [
+        "elif 是 else if 的意思。",
+        "多个条件要按顺序写。",
+        "范围判断时建议从高到低或从低到高，别乱跳。",
+        "最后用 else 兜底。"
+      ],
+      "code": "score = int(input(\"请输入成绩：\"))\nif score >= 90:\n    print(\"优秀\")\nelif score >= 80:\n    print(\"良好\")\nelif score >= 60:\n    print(\"达标\")\nelse:\n    print(\"未达标\")",
+      "output": "输入 85 输出良好；输入 58 输出未达标。",
+      "examTip": "多分支判断像安检通道：先过第一个条件，没过再去下一个。别把顺序写反。",
+      "miniTask": "输入月份 month，1-3 输出春季，4-6 夏季，7-9 秋季，10-12 冬季。"
+    },
+    {
+      "id": "C04",
+      "group": "条件语句",
+      "title": "逻辑运算 and / or / not",
+      "level": "重点",
+      "goal": "会写多个条件组合。",
+      "summary": "and 表示都满足，or 表示满足任意一个，not 表示取反。",
+      "points": [
+        "and：两边都 True 才 True。",
+        "or：有一个 True 就 True。",
+        "not：把 True/False 反过来。",
+        "复杂条件建议加括号提高可读性。"
+      ],
+      "code": "age = int(input(\"年龄：\"))\nscore = int(input(\"分数：\"))\n\nif age >= 18 and score >= 60:\n    print(\"通过\")\nelse:\n    print(\"未通过\")",
+      "output": "年龄至少 18 且分数至少 60 才输出通过。",
+      "examTip": "题目说‘同时’，多半用 and；说‘或者’，多半用 or。",
+      "miniTask": "输入 x，判断它是否在 1 到 100 之间。"
+    },
+    {
+      "id": "C05",
+      "group": "条件语句",
+      "title": "真值判断：0、空字符串、None 常为假",
+      "level": "常考易错",
+      "goal": "看懂 if x: 这种写法。",
+      "summary": "Python 里很多对象可以直接当条件，0、空字符串、空列表、None 通常按 False 处理。",
+      "points": [
+        "if x: 表示判断 x 是否为真。",
+        "0、''、[]、None 通常是假。",
+        "非零数字、非空字符串通常是真。",
+        "初学阶段写 x != 0 更清楚。"
+      ],
+      "code": "x = 0\nif x:\n    print(\"真\")\nelse:\n    print(\"假\")\n\nname = \"Python\"\nif name:\n    print(\"字符串非空\")",
+      "output": "先输出 假，再输出 字符串非空。",
+      "examTip": "if 0 不执行，if 1 执行。读题时别把 0 当成普通数字忽略。",
+      "miniTask": "输入一个字符串 s，如果 s 不是空字符串，输出 ok。"
+    },
+    {
+      "id": "C06",
+      "group": "条件语句",
+      "title": "嵌套 if：条件里再判断",
+      "level": "入门够用",
+      "goal": "看懂两层 if，但尽量别写太深。",
+      "summary": "嵌套 if 就是在一个分支内部继续判断，适合先分大类再分小类。",
+      "points": [
+        "内层 if 要比外层多缩进。",
+        "先判断大条件，再判断小条件。",
+        "超过两层时可读性会下降。",
+        "考试常用：先判断能否整除 2，再判断能否整除 3。"
+      ],
+      "code": "num = int(input(\"输入整数：\"))\nif num % 2 == 0:\n    if num % 3 == 0:\n        print(\"能被 2 和 3 整除\")\n    else:\n        print(\"只能被 2 整除\")\nelse:\n    print(\"不能被 2 整除\")",
+      "output": "输入 6 输出能被 2 和 3 整除；输入 4 输出只能被 2 整除。",
+      "examTip": "嵌套题先画树：第一问分两边，第二问在某一边里面继续分。",
+      "miniTask": "输入年份 year，先判断是否能被 4 整除，再判断是否能被 100 整除。"
+    },
+    {
+      "id": "L01",
+      "group": "循环语句",
+      "title": "while 循环：条件成立就一直做",
+      "level": "重点",
+      "goal": "会写计数循环，防止死循环。",
+      "summary": "while 会在条件为 True 时反复执行缩进代码块。",
+      "points": [
+        "格式：while 条件:",
+        "循环内部必须有机会改变条件。",
+        "计数变量常用 i、count。",
+        "忘记 i += 1 容易死循环。"
+      ],
+      "code": "i = 1\nwhile i <= 5:\n    print(i)\n    i += 1\nprint(\"结束\")",
+      "output": "依次输出 1 2 3 4 5，然后输出结束。",
+      "examTip": "while 三件套：初值、条件、更新。少一个就容易翻车。",
+      "miniTask": "用 while 输出 1 到 10。"
+    },
+    {
+      "id": "L02",
+      "group": "循环语句",
+      "title": "for + range：固定次数循环",
+      "level": "重点",
+      "goal": "会用 range 控制循环次数。",
+      "summary": "for 常用于遍历序列；range 常用于生成一段整数。",
+      "points": [
+        "range(5) 生成 0,1,2,3,4。",
+        "range(1, 6) 生成 1 到 5。",
+        "range(a, b) 包含 a，不包含 b。",
+        "知道循环次数时优先考虑 for。"
+      ],
+      "code": "for i in range(1, 6):\n    print(i)\n\nsum_num = 0\nfor i in range(1, 101):\n    sum_num += i\nprint(sum_num)",
+      "output": "先输出 1 到 5；再输出 1 到 100 的和 5050。",
+      "examTip": "range 右边取不到。range(1, 10) 最后是 9，不是 10。",
+      "miniTask": "用 for 求 1 到 n 的和。"
+    },
+    {
+      "id": "L03",
+      "group": "循环语句",
+      "title": "循环里套 if：筛选数据",
+      "level": "重点",
+      "goal": "会在循环中判断，比如输出偶数、统计个数。",
+      "summary": "循环负责一个个拿数据，if 负责决定这个数据要不要处理。",
+      "points": [
+        "常见结构：for i in range(...): if 条件:",
+        "求和时先定义 sum_num = 0。",
+        "计数时先定义 count = 0。",
+        "条件成立就累加或计数。"
+      ],
+      "code": "count = 0\nfor i in range(1, 11):\n    if i % 2 == 0:\n        print(i)\n        count += 1\nprint(\"偶数个数：\", count)",
+      "output": "输出 2,4,6,8,10，并输出偶数个数 5。",
+      "examTip": "看到‘统计满足条件的个数’，大概率是循环 + if + count += 1。",
+      "miniTask": "统计 1 到 100 中能被 3 整除的数有多少个。"
+    },
+    {
+      "id": "L04",
+      "group": "循环控制",
+      "title": "break / continue / pass",
+      "level": "常考易错",
+      "goal": "分清停止整个循环、跳过本轮、什么都不做。",
+      "summary": "break 直接结束循环；continue 跳过本次进入下一轮；pass 是占位空语句。",
+      "points": [
+        "break：循环到此结束。",
+        "continue：本轮后面不做了，去下一轮。",
+        "pass：不做事，只是保证语法完整。",
+        "break 会影响循环 else 是否执行。"
+      ],
+      "code": "for i in range(1, 6):\n    if i == 3:\n        continue\n    print(i)\n\nfor i in range(1, 6):\n    if i == 4:\n        break\n    print(i)",
+      "output": "第一段输出 1,2,4,5；第二段输出 1,2,3。",
+      "examTip": "continue 是跳过当前这一轮，不是跳出整个循环。别把它和 break 搅成一锅粥。",
+      "miniTask": "循环输出 1 到 10，但跳过 5；遇到 8 时停止。"
+    },
+    {
+      "id": "S01",
+      "group": "综合模板",
+      "title": "成绩等级判断模板",
+      "level": "入门必会",
+      "goal": "掌握期末最容易考的多分支模板。",
+      "summary": "输入成绩，按范围输出等级。适合练 if-elif-else 顺序。",
+      "points": [
+        "先读入整数。",
+        "从高分到低分判断。",
+        "每个分支只输出一个结果。",
+        "最后用 else 兜底。"
+      ],
+      "code": "score = int(input(\"请输入成绩：\"))\n\nif score < 0 or score > 100:\n    print(\"成绩不合法\")\nelif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelif score >= 60:\n    print(\"C\")\nelse:\n    print(\"D\")",
+      "output": "输入 95 输出 A；输入 77 输出 C；输入 120 输出成绩不合法。",
+      "examTip": "先判非法值，再判正常等级。否则 120 可能会被误判成 A。",
+      "miniTask": "把等级改成 优秀/良好/达标/未达标。"
+    },
+    {
+      "id": "S02",
+      "group": "综合模板",
+      "title": "求和模板：1 到 n",
+      "level": "入门必会",
+      "goal": "掌握循环累加。",
+      "summary": "先设总和为 0，每循环一次就把当前数字加进去。",
+      "points": [
+        "sum_num = 0 是累加器。",
+        "for i in range(1, n+1) 才能包含 n。",
+        "sum_num += i 等价于 sum_num = sum_num + i。",
+        "输出放在循环外，避免每次都输出。"
+      ],
+      "code": "n = int(input(\"请输入 n：\"))\nsum_num = 0\n\nfor i in range(1, n + 1):\n    sum_num += i\n\nprint(\"和为：\", sum_num)",
+      "output": "输入 100，输出 5050。",
+      "examTip": "求最终结果时，print 通常放在循环结束后；放在循环里会输出一堆中间值。",
+      "miniTask": "求 1 到 n 中所有偶数的和。"
+    },
+    {
+      "id": "S03",
+      "group": "综合模板",
+      "title": "奇偶判断模板",
+      "level": "入门必会",
+      "goal": "掌握取余 % 的基础用法。",
+      "summary": "n % 2 得到 n 除以 2 的余数，余数为 0 说明是偶数。",
+      "points": [
+        "% 是取余。",
+        "n % 2 == 0 判断偶数。",
+        "n % 2 != 0 判断奇数。",
+        "条件判断里常和 == 搭配。"
+      ],
+      "code": "n = int(input(\"请输入整数：\"))\n\nif n % 2 == 0:\n    print(\"偶数\")\nelse:\n    print(\"奇数\")",
+      "output": "输入 8 输出偶数；输入 9 输出奇数。",
+      "examTip": "判断整除就看余数是否为 0。比如 n % 3 == 0 表示能被 3 整除。",
+      "miniTask": "输入 n，判断它能否被 3 和 5 同时整除。"
+    }
+  ]
+}
